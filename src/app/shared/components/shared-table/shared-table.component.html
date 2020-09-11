@@ -1,0 +1,30 @@
+<div class="container-fluid table ">
+    <div class="row justify-content-end">
+        <div class="search-box">
+            <input class="searchInput" matInput (keyup)="applyFilter($event.target.value)" placeholder="Tìm kiếm"><i
+                class="material-icons">
+                search
+            </i>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col px-0 mx-auto content">
+            <table mat-table class="mat-elevation-z8 table-hover table-striped text-center content "
+                style="width: 100%; text-align: center;" [dataSource]="dataSource">
+
+                <ng-container *ngFor="let disCol of displayedColumns; let colIndex = index" matColumnDef="{{disCol}}">
+                    <th class="col-title" mat-header-cell *matHeaderCellDef> {{disCol}}</th>
+                    <td style="cursor: pointer;" mat-cell *matCellDef="let element">
+                        {{element[disCol]}}
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns; let element"
+                    (click)="navigation(element[displayedColumns[routeIndex]])"></tr>
+            </table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="10" showFirstLastButtons="true">
+            </mat-paginator>
+        </div>
+    </div>
+</div>

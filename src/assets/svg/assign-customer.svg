@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(0,0,0,0);
+      }
+
+      .cls-2 {
+        fill: #224177;
+        stroke: rgba(0,0,0,0);
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #224177;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Group_2048" data-name="Group 2048" transform="translate(-4124 -9716)">
+    <g id="_how_to_reg" data-name=" how_to_reg" transform="translate(3888 8234)">
+      <rect id="Path" class="cls-1" width="35" height="35" transform="translate(236 1482)"/>
+      <path id="Icon" class="cls-2" d="M18.657,27.072A1.166,1.166,0,0,1,17.8,26.7l-2.493-2.664a1.319,1.319,0,0,1,0-1.772l.012-.013a1.159,1.159,0,0,1,.848-.373,1.129,1.129,0,0,1,.838.373L18.657,24l5.334-5.685a1.154,1.154,0,0,1,1.7,0l.012.013a1.319,1.319,0,0,1,0,1.772l-6.189,6.6A1.168,1.168,0,0,1,18.657,27.072Zm-4.336-.122H0V23.582c0-2.5,2.595-4.126,4.772-5.05a22.488,22.488,0,0,1,7.959-1.689,13.933,13.933,0,0,1,1.591.1l-1.337,1.381a5.243,5.243,0,0,0-.031,7.176l1.366,1.447ZM12.73,13.476A6.567,6.567,0,0,1,6.365,6.737,6.567,6.567,0,0,1,12.73,0,6.567,6.567,0,0,1,19.1,6.737,6.567,6.567,0,0,1,12.73,13.476Z" transform="translate(239 1486)"/>
+    </g>
+    <path id="Path_2727" data-name="Path 2727" class="cls-3" d="M4141.356,9730.167l5.632-1.095-.324,5.35" transform="translate(6 8.621)"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<div class="bradcam_text">
+    <ol class="breadcrumb" fxLayout="row" fxLayoutAlign="center center">
+        <li *ngFor="let breadcrumb of breadcrumbs; let i = index">
+            <span>
+                <a [routerLink]="breadcrumb.url">{{ breadcrumb.label }} <span *ngIf="breadcrumb.label">/</span></a>
+            </span>
+        </li>
+    </ol>
+</div>

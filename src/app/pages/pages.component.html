@@ -1,0 +1,25 @@
+<!-- <div class="main-page-content"> -->
+<mat-drawer-container class="drawer_container" autosize>
+    <mat-drawer position="end" #sidenav role="navigation">
+        <app-menu-bar (sidenavToggle)="sidenav.toggle()"></app-menu-bar>
+    </mat-drawer>
+    <mat-drawer #sidenav2 mode="side" position="start" opened fxHide.lt-lg>
+        <app-menu-bar (sidenavToggle)="sidenav.toggle()"></app-menu-bar>
+    </mat-drawer>
+    <mat-drawer-content class="drawer_content">
+        <button (click)="sidenav.toggle()" class="hamburger_btn" fxHide.gt-md>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="user-login">
+            <app-user (clickedSearch)="clickedSearchVal= $event"></app-user>
+        </div>
+        <div (click)="sidenav.close()" class="main_content">
+            <div (click)="sidenav.close()">
+                <router-outlet></router-outlet>
+            </div>
+            <app-notifications></app-notifications>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
+<div [class.backdrop_show]="clickedSearchVal === true"></div>
+<!-- </div> -->

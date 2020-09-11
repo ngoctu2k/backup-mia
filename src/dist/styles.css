@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+/*
+Theme name : FruitUser;
+Theme description : Awesome;
+Author : CI;
+Version : 1.0.0;
+*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif !important;
+  font-weight: 600;
+}
+
+button {
+  outline: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+}

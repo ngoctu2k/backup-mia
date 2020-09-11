@@ -1,0 +1,29 @@
+.dialog-container {
+    min-width: 20rem;
+    min-height: 20rem;
+    mat-toolbar-row {
+        display: flex;
+        justify-content: space-between;
+        .dialog-title {
+            background: #224177;
+            color: #ffffff;
+            width: 10rem;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .close-button {
+            font-size: 2em; 
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+

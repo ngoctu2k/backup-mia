@@ -1,0 +1,39 @@
+.info {
+  color: #000000;
+  padding-right: 0;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.search {
+  font-family: "Segoe UI", sans-serif !important;
+  outline: none;
+  width: 300px;
+  height: 44px;
+  border-radius: 10px;
+  margin-right: 20px;
+  position: relative;
+  border: none;
+  padding: 10px;
+  background-color: #F2F1ED;
+  border: #707070;
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.16);
+}
+
+.icon {
+  position: absolute;
+  top: 25%;
+  right: 90px;
+  width: 30px;
+  height: 30px;
+}
+
+.title {
+  font-family: "Segoe UI", sans-serif !important;
+  font-size: 21px;
+  font-weight: 600;
+  color: #375853;
+  padding-left: 37px;
+}

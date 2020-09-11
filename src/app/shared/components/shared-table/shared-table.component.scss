@@ -1,0 +1,129 @@
+table {
+  width: 100%;
+  border-collapse: separate;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 600;
+}
+::ng-deep th.mat-header-cell {
+  background-color: #707070 !important;
+  color: white;
+  text-align: center !important;
+}
+
+th.mat-header-cell:first-of-type {
+  padding-left: 0px;
+}
+th.mat-header-cell:last-of-type {
+  padding-right: 0px;
+}
+td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  content td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+::ng-deep tr {
+  border-bottom: none;
+}
+th {
+  border-right: 1px solid;
+}
+th:nth-child(1) {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: 1px solid;
+  border-bottom: none;
+}
+th:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: 1px solid;
+  border-bottom: none;
+}
+.mat-elevation-z8 {
+  border-radius: 10px;
+}
+.content td {
+  padding: 0rem 0 !important;
+}
+
+th.mat-header-cell {
+  border-bottom-style: none;
+}
+input[type="checkbox"] {
+  // padding-left: 0 !important;
+  margin-left: 15px;
+}
+::ng-deep.mat-paginator .mat-paginator-container {
+  justify-content: space-between !important;
+}
+
+::ng-deep tr.mat-row {
+  padding-top: 20px;
+}
+::ng-deep tr.mat-row,
+tr.mat-footer-row, tr.mat-header-row {
+  height: 4.6vh !important;
+}
+::ng-deep td.mat-cell:first-of-type,
+td.mat-footer-cell:first-of-type,
+th.mat-header-cell:first-of-type {
+  padding: auto;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #343a40 !important;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #343a40;
+}
+::ng-deep .mat-form-field.mat-focused .mat-input-element {
+  color: #343a40;
+}
+
+.table {
+  height: 64vh;
+  overflow-y: auto;
+  td {
+    vertical-align: middle;
+  }
+  th {
+    vertical-align: middle;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+.search-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 17px;
+  width: 290px;
+  .searchInput {
+    border: 1px solid white;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: inset 5px 5px 10px #cccccc, inset -5px -5px 10px #ffffff;
+    height: 40px;
+    padding-left: 20px !important;
+    position: absolute;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  i {
+    cursor: pointer;
+    position: absolute;
+    color: #224177;
+    right: 0px;
+    margin-top: 7px;
+    margin-right: 10px;
+  }
+}

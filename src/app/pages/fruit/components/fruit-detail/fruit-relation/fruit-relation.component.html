@@ -1,0 +1,26 @@
+<div class="d-flex align-items-center justify-content-center flex-column">
+    <div class="detail__rate" *ngFor="let item of list">
+        <div class="detail__rate-stt">{{item.id}}</div>
+        <div class="detail__rate-all">
+            <div class="detail__rate-title">
+                {{item.title}}
+            </div>
+            <div class="detail__rate-code">
+                {{item.code}}
+            </div>
+            <div class="detail__rate-rating d-flex">
+                <p class="pr-3">Đánh giá: </p>
+                <div class="star-ratings-css-top" style="width: 84%">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+            </div>
+            <div class="detail__rate-img">
+                <img src={{item.img}} alt="">
+            </div>
+        </div>
+    </div>
+</div>

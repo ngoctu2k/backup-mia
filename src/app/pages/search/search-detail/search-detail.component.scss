@@ -1,0 +1,296 @@
+@import "../../../shared/scss/responsive";
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carousel-detail {
+  ::ng-deep .carousel-cell {
+    background-color: #e6e4da;
+    position: relative;
+    top: 50%;
+    height: 189px;
+    border-radius: 10px 10px 0 0;
+    overflow: unset !important;
+    // width: 250px;
+    transition: 0.2s; // hạ xuống từ từ
+    &:hover {
+      top: 35%;
+      transition: all ease-in-out 0.3s;
+    }
+  }
+}
+
+.search_container {
+  background-color: #f7f6f2;
+  padding: 10px 10px 50px 10px;
+  border-radius: 10px;
+  @media #{$lt_lg} {
+    display: block !important;
+  }
+  .search_detail {
+    position: relative;
+    @media #{$lt_lg} {
+      max-width: 100% !important;
+    }
+    .fruit_provinces {
+      margin-left: 90px;
+      @media #{$lg} {
+        margin-right: 21px;
+      }
+      @media #{$lt_lg} {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 90px;
+      }
+      .search__detail-left-list {
+        @media #{$lt_sm} {
+          padding-top: 100px;
+        }
+      }
+      .search__detail-left-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: #355650;
+        margin-bottom: 20px;
+        @media #{$lt_sm} {
+          font-size: 1.2em;
+        }
+      }
+      .search__detail-left-item {
+        margin-bottom: 20px;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        background-color: #c2a874;
+        .search__detail-left-item-number {
+          background-color: #bb9954;
+          color: white;
+          font-size: 18px;
+          font-weight: 500;
+          display: inline-block;
+          width: 60px;
+          height: 50px;
+          border-radius: 10px;
+          text-align: center;
+          padding-top: 15px;
+        }
+        .search__detail-left-item-name {
+          height: 50px;
+          width: 257px;
+          color: white;
+          font-size: 18px;
+          font-weight: 500;
+          padding-left: 20px;
+          padding-top: 15px;
+          //   215px
+          @media #{$lt_sm} {
+            font-size: 1.2em;
+            width: 215px;
+          }
+        }
+      }
+    }
+    // box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.16);
+    .fruit_detail {
+      background-color: #f7f6f2;
+      .detail__title {
+        width: 100%;
+        background-color: #4f6a5d;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 12px 0;
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+      }
+      .detail__img {
+        width: 210px;
+        height: 210px;
+        position: absolute;
+        left: 0;
+        transform: translateX(-20%);
+        border-radius: 10px;
+        box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.1);
+        @media #{$lt_sm} {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, -30%);
+        }
+        &::before {
+          content: "";
+          display: block;
+          width: 198px;
+          height: 198px;
+          position: absolute;
+          background: red;
+          z-index: 99;
+        }
+      }
+      .detail__content {
+        @media #{$lt_sm} {
+          padding-top: 200px;
+          position: relative;
+        }
+      }
+      .detail__infor {
+        background-color: #fff;
+        height: 250px;
+        width: 82%;
+        padding-left: 220px;
+        position: relative;
+        border-radius: 10px;
+        @media #{$lt_sm} {
+          padding: 10px 20px;
+          height: 500px;
+          flex-direction: column;
+          margin-top: 100px;
+        }
+      }
+      .detail__product {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 20px;
+        @media #{$lt_sm} {
+          flex-direction: column;
+          justify-content: center;
+        }
+        .detail__product-title {
+          font-size: 22px;
+          font-weight: 500;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          color: #737373;
+        }
+      }
+      .detail__rating {
+        span {
+          font-size: 25px;
+          color: #bf8e55;
+          margin-right: 5px;
+        }
+      }
+      ::ng-deep .carousel-details {
+        .carousel-arrow {
+          border-radius: 10px;
+          background-color: #e6e4da;
+        }
+        .carousel-dots {
+          bottom: -40px;
+          .carousel-dot-active {
+            border: 1px solid #4f6a5d !important;
+          }
+        }
+        .carousel-dot {
+          background-color: #4f6a5d;
+          border-color: #faf9f7;
+        }
+      }
+    }
+  }
+}
+
+.relation_title {
+  text-align: center;
+  display: inline;
+  // margin-bottom: -35px;
+  margin-top: 35px;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  padding: 20px 0;
+  @media #{$gt_md} {
+    margin-right: 15%;
+  }
+  @media #{$lt_sm} {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.search__detail-bottom {
+  margin-right: 100px;
+  margin-left: -53px;
+  @media #{$lt_lg} {
+    margin-left: -0 !important;
+    margin-right: 0 !important;
+  }
+  ::ng-deep .carousel {
+    margin-top: 30px;
+    // width: 80%;
+  }
+  ::ng-deep .search-cell {
+    background-color: #e6e4da;
+    position: relative;
+    top: 50%;
+    height: 189px;
+    border-radius: 10px 10px 0 0;
+    overflow: unset !important;
+    // width: 250px;
+    transition: 0.2s; // hạ xuống từ từ
+    &:hover {
+      top: 35%;
+      transition: all ease-in-out 0.3s;
+    }
+    @media #{$lt_sm} {
+      top: 35%;
+    }
+  }
+  ::ng-deep .carousel-arrow-next {
+    right: -45px !important;
+    @media #{$lt_sm} {
+      right: -40px !important;
+    }
+  }
+  ::ng-deep .carousel-arrow-prev {
+    left: -60px !important;
+    @media #{$lt_sm} {
+      left: -40px !important;
+    }
+  }
+  ::ng-deep .carousel-arrow {
+    border-radius: 10px !important;
+    background-color: #e6e4da !important;
+    box-shadow: none !important;
+  }
+  .search__detail-bottom-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -35%;
+    img {
+      width: 200px;
+      height: 150px;
+      z-index: 1;
+    }
+  }
+  .search__detail-bottom-text {
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+  }
+}
+
+// tú thêm
+.hidden_lg {
+  @media (min-width: 1280px) and (max-width: 1440px) {
+    display: none;
+  }
+}
+
+.fruit_detail_container {
+  @media (min-width: 1280px) and (max-width: 1440px) {
+    max-width: 60% !important;
+  }
+}

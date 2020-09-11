@@ -1,0 +1,51 @@
+@import "../../scss/responsive";
+.bradcam_text {
+  @media #{$lt_lg} {
+    margin-left: 55px;
+  }
+  .breadcrumb {
+    background: none;
+    font-size: 0.8em;
+    //   margin: 0;
+    a,
+    span {
+      color: darkgrey;
+    }
+    a:hover,
+    span:hover {
+      color: red;
+      text-decoration: none;
+    }
+    li {
+      font-size: 18px;
+      list-style: none;
+      margin: 5px;
+    }
+
+    li:last-child {
+      margin-right: 20px;
+    }
+    //   li::after {
+    //     padding: 3px;
+    //     content: " /";
+    //     color: black;
+    //   }
+    //   li:last-child::after {
+    //     content: "";
+    //   }
+    li {
+      span {
+        font-size: 18px;
+        color: black;
+        font-weight: 400;
+        text-transform: capitalize;
+        a {
+          color: black;
+          &:hover {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}

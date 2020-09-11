@@ -1,0 +1,76 @@
+<div fxLayout="row" fxLayout.lt-lg="column" fxFlex="87" fxFlex.lt-lg="100" fxLayoutGap="20px" fxLayoutAlign="center">
+  <div fxFlex="55" fxFlex.lt-lg="100">
+    <div class="fruit-text d-flex" fxLayoutAlign.lt-lg="center">
+      <img src="assets/svg/icon/fruit.svg">
+      <span class="fruit-title">Trái cây</span>
+    </div>
+    <div class="fruit_list">
+      <div [style.padding]="'0 22px'" *ngFor="let item of numberArr; let i = index "
+        [routerLink]="['/pages/search','detail']">
+
+        <div class="fruit_item">
+          <div class="fruit_item_text">
+            <h4>Chuối Laba Đà Lạt</h4>
+            <p>Mã số : 23597425</p>
+            <div class="fruit_ratings_css">
+              <p>Đánh giá :</p>
+
+              <div class="fruit_ratings_css_top" style="width: 84%">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+          </div>
+          <div class="fruit_item_img">
+            <img src="assets/images/engin-akyurt-4yTKah43Y2o-unsplash.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <mat-divider [vertical]="true"></mat-divider>
+  <div fxFlex="45" fxFlex.lt-lg="100">
+    <div class="regions-text  d-flex" fxLayoutAlign.lt-lg="center">
+      <img src="assets/images/floor.png">
+      <span class="regions-title" [style.text-align]="'center'">Trái cây</span>
+    </div>
+
+
+
+    <div class="regions_statistic">
+      <ul>
+        <li *ngFor="let item of numberArr ;let i = index" class="regions_statistic_list">
+          <div class="statistic_detail">
+            <div class="region_name">
+              <h3>Hà Giang</h3>
+              <span class="regions_index" fxLayoutAlign="center">{{i + 1}}</span>
+            </div>
+            <div class="statistic_right">
+              <table class="regions_table">
+                <tr>
+                  <td class="table_lable">Diện tích:</td>
+                  <td class="table_detail">2500 km2</td>
+                </tr>
+                <tr>
+                  <td class="table_lable">Khí hậu:</td>
+                  <td class="table_detail">Nhiệt đới ẩm</td>
+                </tr>
+                <tr>
+                  <td class="table_lable">Loại trái cây:</td>
+                  <td class="table_detail">1 loại</td>
+                </tr>
+              </table>
+              <div class="regions_fruit_icon">
+                <img src="assets/images/Path 18173.png" alt="">
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

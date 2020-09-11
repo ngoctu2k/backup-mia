@@ -1,0 +1,22 @@
+<!-- <div id="mySidenav" class="sidenav insideShadow" [style.text-align]="nav == 0 ? 'center': 'left'">
+  <div class="avatar mx-auto text-center" [style.box-shadow]="nav == 0 ? 'none': '4px 3px 10px 0px #4c4c4c'" [style.width]="nav == 0 ? '100px': '140px'">
+    <img src="/assets/images/doremon.jpg" width="70" alt="">
+    <b class="mt-2" *ngIf="nav !== 0">Hibiscus Clinic</b>
+  </div><br><br>
+  <span><a (click)="nav == 0? openNav() : closeNav()" class="text-center" style="font-size: xx-large; margin-right: 3px"> ⇆ </a></span>
+  <a *ngFor="let item of menuItem" [class]="splitedUrl.includes(item.elementOnUrl) ? 'sideBarActive': 'sideBar'"
+    name="{{item.title}}" [routerLink]="item.link">
+    <mat-icon>{{item.icon}}</mat-icon><span *ngIf="nav !== 0">{{item.title}}</span>
+  </a>
+</div> -->
+<div class="menubar">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="" width="150px">
+  </div>
+  <ul>
+    <li [class]="splitedUrl.includes(item.elementOnUrl) ? 'liActive' : 'liDefault'" *ngFor="let item of menuItem"
+      routerLink="{{item.link}}">
+      <span><img [src]="item.icon"></span> {{item.title}}
+    </li>
+  </ul>
+</div>

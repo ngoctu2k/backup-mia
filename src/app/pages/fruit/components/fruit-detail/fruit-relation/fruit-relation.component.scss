@@ -1,0 +1,93 @@
+@import "../../../../../shared/scss/responsive";
+.detail__rate {
+    margin-top: 14px;
+    position: relative;
+    padding: 10px 20px 0px 20px;
+    background-color: #e6e4da;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.16);
+    .detail__rate-stt {
+        position: absolute;
+        text-align: center;
+        color: white;
+        line-height: 30px;
+        font-size: 18px;
+        top: 0;
+        left: 20px;
+        height: 30px;
+        width: 80px;
+        background-color: #707070;
+        border-radius: 0 0 10px 10px;
+        @media #{$lt_sm} {
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+        }
+    }
+    .detail__rate-all {
+        @media #{$lt_sm} {
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+    .detail__rate-title {
+        font-family: "Segoe UI";
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+    .detail__rate-code {
+        font-size: 16px;
+        font-weight: 400;
+        padding: 5px 0;
+    }
+    .detail__rate-img {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translate(0, -50%);
+        img {
+            width: 175px;
+            height: 109px;
+        }
+        @media #{$lt_sm} {
+            top: 0%;
+            right: 50%;
+            transform: translate(50%, 0%);
+        }
+    }
+    .detail__rate-rating {
+        p {
+            @media #{$lt_sm} {
+                width: 100%;
+            }
+        }
+    }
+    .star-ratings-css {
+        display: flex;
+        .star-ratings-css p {
+            width: 100px;
+            font-family: "Segoe UI";
+            font-size: 16px;
+            flex-wrap: 300;
+        }
+        .star-ratings-css-top {
+            font-size: 18px;
+            margin-right: 10px;
+            @media #{$lt_xs} {
+                font-size: 14px;
+            }
+            span {
+                background: linear-gradient(to top, #daa461 100%, #daa461 0%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16);
+            }
+        }
+    }
+}

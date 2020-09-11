@@ -1,0 +1,73 @@
+<div fxLayout="column" fxFlex="100" class="search_container">
+    <div class="search_detail" [style.max-width.%]="100" fxLayout="row" fxLayout.lt-lg="column" fxLayoutGap="20px">
+        <div class="hidden_lg" fxHide.lt-lg fxFlex fxHide.lt-lg></div>
+        <div fxFlex="45" class="fruit_detail_container" fxLayout="column">
+            <div class="fruit_detail">
+                <div class="detail__title">
+                    <span>Chi tiết trái</span>
+                    <div class="dots d-flex align-items-center justify-content-center float-right mt-1">
+                    </div>
+                </div>
+                <div class="detail__product">
+                    <div class="detail__infor d-flex align-items-center">
+                        <img class="detail__img" src="assets/images/mango.png" alt="" style="z-index: 100;">
+                        <div class="detail__content">
+                            <h3 class="detail__product-title">{{val.title}}</h3>
+                            <div class="detail__rating">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                            </div>
+                            <hr>
+                            <div class="detail__code">
+                                <span>Mã: {{val.code}}</span>
+                            </div>
+                            <div class="detail__describle">
+                                <span>Mô tả: </span>
+                            </div>
+                            <div class="detail__nutri">
+                                <span>Giá trị dinh dưỡng: </span>
+                            </div>
+                            <div class="detail__town">
+                                <span>Danh sách tỉnh/ thành phố trồng trọt: </span>
+                            </div>
+                            <div class="detail__note">
+                                <span>Ghi chú:</span>
+                            </div>
+                            <div class="detail__area">
+                                <span>Khu vực trồng:</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <carousel [images]="images" [dots]="true" [overflowCellsLimit]="4" [margin]="10" [cellWidth]="150"
+                    [height]="150" class="carousel-details">
+                </carousel>
+            </div>
+
+        </div>
+        <div fxFlex class="fruit_provinces" fxLayoutAlign="center center" [style.margin-right.px]="20">
+            <ul class="search__detail-left-list">
+                <h3 class="search__detail-left-title">Địa phương trồng</h3>
+                <li class="search__detail-left-item" *ngFor="let item of province">
+                    <span class="search__detail-left-item-number">{{item.id}}</span>
+                    <span class="search__detail-left-item-name">{{item.name}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h3 class="relation_title">Tìm kiếm tương tự</h3>
+    <div class="search__detail-bottom" fxLayoutAlign="center">
+        <carousel [style.width.%]="80">
+            <div class="carousel-cell search-cell" *ngFor="let item of images">
+                <div class="search__detail-bottom-img">
+                    <img [src]="item.path">
+                </div>
+                <p class="search__detail-bottom-text" style="padding-top: 25px;">{{val.name}}</p>
+            </div>
+        </carousel>
+    </div>
+</div>

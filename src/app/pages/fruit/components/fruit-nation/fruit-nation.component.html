@@ -1,0 +1,10 @@
+<div fxLayout="row" fxFlex="100" fxFlex.lt-md="100" fxLayout.lt-md="column" fxLayoutGap="15px">
+  <app-nation-map fxFlex="55" fxFlex.lt-md="100"></app-nation-map>
+  <!-- End Map -->
+  <!--  Start overview-->
+  <app-nation-overview fxFlex="43" fxFlex.lt-md="100" [isDetail]="isDetail"
+    (showFruitDetail)="handleDetailFruit($event)" *ngIf="isDetail === false"></app-nation-overview>
+  <app-fruit-detail fxFlex="43" fxFlex.lt-md="100" *ngIf="isDetail === true">
+  </app-fruit-detail>
+  <!-- <div fxFlex="5" fxHide.lt-md></div> -->
+</div>

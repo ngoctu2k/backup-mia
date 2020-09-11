@@ -1,0 +1,57 @@
+<!-- <div class="container-fluid "> -->
+<div class="detail">
+    <div class="detail__title">
+        <span class="material-icons title" (click)="handle()">keyboard_backspace</span>
+        <span class="title-head">Chi tiết trái</span>
+        <div class="dots d-flex align-items-center justify-content-center float-right mt-1">
+            <div class="dot"
+                style="width:7px; height: 7px; border-radius: 50%; background-color: #fff; margin-right: 5px;">
+            </div>
+            <div class="dot"
+                style="width:7px; height: 7px; border-radius: 50%; background-color: #fff; margin-right: 5px;">
+            </div>
+            <div class="dot"
+                style="width:7px; height: 7px; border-radius: 50%; background-color: #fff; margin-right: 20px;">
+            </div>
+        </div>
+    </div>
+    <div class="detail__product">
+        <div class="detail__infor d-flex align-items-center">
+            <img class="detail__img" src="assets/images/mango.png" alt="" style="z-index: 100;">
+            <div class="detail__content">
+                <h3 class="detail__product-title">{{val.title}}</h3>
+                <div class="detail__rating">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+                <hr>
+                <div class="detail__code">
+                    <span>Mã: {{val.code}}</span>
+                </div>
+                <div class="detail__describle">
+                    <span>Mô tả: </span>
+                </div>
+                <div class="detail__nutri">
+                    <span>Giá trị dinh dưỡng: </span>
+                </div>
+                <div class="detail__town">
+                    <span>Danh sách tỉnh/ thành phố trồng trọt: </span>
+                </div>
+                <div class="detail__note">
+                    <span>Ghi chú:</span>
+                </div>
+                <div class="detail__area">
+                    <span>Khu vực trồng:</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <carousel [images]="images" [dots]="true" [overflowCellsLimit]="4" [margin]="10" [cellWidth]="150" [height]="150"
+        class="carousel-detail">
+    </carousel>
+</div>
+<!-- </div> -->
