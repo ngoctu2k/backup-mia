@@ -110,8 +110,11 @@
         @media (min-width: 1440px) and (max-width: 1920px) {
             height: 350px;
         }
-        @media (min-height:900px) {
-            height: 250px;
+        .mat-tab-list {
+            height: 44px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 50px;
         }
         @media #{$lt_md} {
             height: 350px;
