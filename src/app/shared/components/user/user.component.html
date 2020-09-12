@@ -1,5 +1,5 @@
 <div [class.backdrop_show]="isClickSearch === true"></div>
-<div fxLayout="row" fxFlex="100" fxFlex.lt-lg="100" fxLayoutAlign="end">
+<div fxLayout="row" fxFlex="100" fxFlex.lt-lg="100" fxLayoutAlign="end" style="background-color: #F4F9F5;">
   <div fxFlex="40" fxLayoutAlign="start center">
     <app-breadcrumb></app-breadcrumb>
     <!-- <span class="title" fxHide.lt-md>Việt Nam</span> -->
@@ -84,7 +84,11 @@
           <mat-icon *ngIf="isClickSearch===true">close</mat-icon>
         </button>
       </mat-form-field>
-      <mat-autocomplete #auto="matAutocomplete">
+
+
+      <!-- ================= Search default ========================== -->
+
+      <!-- <mat-autocomplete #auto="matAutocomplete">
         <div fxLayout="column">
           <div [style.margin-left.vw]="5" fxFlexAlign="start" class="search_fruit" fxLayout="column">
             <div class="fruit_text d-flex">
@@ -98,60 +102,116 @@
                   {{vegetable.name}}
                 </mat-chip>
               </mat-chip-list>
-            </div>
-
+           </div>
           </div>
-
-
           <div [style.margin-left.vw]="5" class="search_region" fxFlexAlign="start" fxLayout="row" fxFlex="100">
             <div class="search_common" fxFlex="60" fxLayoutGap="30px">
               <div class="fruit_text d-flex ">
                 <mat-icon>search</mat-icon>
                 <span class="fruit_title">Tìm kiếm phổ biến</span>
               </div>
-              <div class="common_list" fxLayout="row">
-                <div class="common_item d-flex" *ngFor="let item of list">
-                  <p>{{item.name}}</p>
-                  <img src="../../../../assets/images/slider3.png" alt="">
-                </div>
-              </div>
-              <div class="common_list" fxLayout="row">
-                <div class="common_item d-flex" *ngFor="let item of list">
-                  <p>{{item.name}}</p>
-                  <img src="../../../../assets/images/slider3.png" alt="">
-                </div>
-              </div>
+              <div class="search_common_list d-flex" *ngFor="let item of list">
+                <img [src]=item.image alt="">
+                <div class="common_item">
+                  <div class="item_text">
+                    <ul>
+                      <li><a href="">{{item.name}}</a></li>
+                      <li>Khu vực : </li>
+                      <li>Thời gian mùa vụ :</li>
+                      <li>Số lượng :</li>
+                    </ul>
 
+                  </div>
+
+                  <div class="fruit_ratings_css_top">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <mat-option style="display:none"></mat-option>
+      </mat-autocomplete> -->
+      <!-- ================= Search result ========================== -->
+      <mat-autocomplete #auto="matAutocomplete">
+        <div fxLayout="column">
+          <div [style.margin-left.vw]="5" class="search_region" fxFlexAlign="start" fxLayout="row" fxFlex="100">
+            <div class="search_common" fxFlex="35" fxLayoutGap="30px">
+              <div class="fruit_text d-flex ">
+                <img src="../../../../assets/images/Path 18173.png" alt="">
+                <span class="fruit_title">Trái Cây</span>
+              </div>
+              <div class="search_common_list d-flex" *ngFor="let item of list">
+                <img [src]=item.image alt="">
+                <div class="common_item">
+                  <div class="item_text">
+                    <ul>
+                      <li><a href="">{{item.name}}</a></li>
+                      <li>Khu vực : </li>
+                      <li>Thời gian mùa vụ :</li>
+                      <li>Số lượng :</li>
+                    </ul>
+
+                  </div>
+
+                  <div class="fruit_ratings_css_top">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-
-            <div class="search_suggest" fxFlex="60">
-              <div class="fruit_text d-flex">
-                <mat-icon>search</mat-icon>
-                <span class="fruit_title">Gợi ý cho bạn</span>
+            <div class="search_result" fxFlex=" 65">
+              <div class="fruit_text d-flex ">
+                <img src="../../../../assets/images/floor.png" alt="">
+                <span class="fruit_title">Vùng/miền</span>
               </div>
-              <div class="common_list" fxLayout="row">
-                <div class="common_item d-flex" *ngFor="let item of list">
-                  <p>{{item.name}}</p>
-                  <img src="../../../../assets/images/slider3.png" alt="">
+              <div class="search_result_item ">
+                <h1>Hà Giang</h1>
+                <div class="statistic_right">
+                  <table class="regions_table">
+                    <tr>
+                      <td class="table_lable">Diện tích:</td>
+                      <td class="table_detail">2500 km2</td>
+                    </tr>
+                    <tr>
+                      <td class="table_lable">Khí hậu:</td>
+                      <td class="table_detail">Nhiệt đới ẩm</td>
+                    </tr>
+                    <tr>
+                      <td class="table_lable">Loại trái cây:</td>
+                      <td class="table_detail">1 loại</td>
+                    </tr>
+                  </table>
+                  <div class="regions_fruit_icon d-flex">
+                    <img src="../../../../assets/svg/icon/fruit.svg" alt="">
+                    <span>Trái cây ở Hà Giang</span>
+                  </div>
                 </div>
               </div>
-              <div class="common_list" fxLayout="row">
-                <div class="common_item d-flex" *ngFor="let item of list">
-                  <p>{{item.name}}</p>
-                  <img src="../../../../assets/images/slider3.png" alt="">
-                </div>
-              </div>
-
             </div>
-
-
           </div>
 
-        </div>
 
+        </div>
         <mat-option style="display:none"></mat-option>
       </mat-autocomplete>
+
+
+
+
+
+
+
       <img *ngIf="user !== undefined" class="user_avatar"
         src="https://images.unsplash.com/photo-1514477917009-389c76a86b68?ixlib=rb-1.2.1&w=1000&q=80"
         [matMenuTriggerFor]="menu">

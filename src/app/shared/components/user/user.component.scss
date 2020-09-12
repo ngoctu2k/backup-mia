@@ -6,115 +6,117 @@
   }
 }
 
+.search_common {
+  border-right: 2px solid #ccc;
 
+  .search_common_list {
+    margin-top: 15px;
 
-@media screen and (min-width: 768px) and (max-width: 1366px) {
-  .search_common {
-    .common_list:last-child {
-      display: none !important;
-    }
-  }
-
-  .search_suggest {
-    .common_list:last-child {
-      display: none !important;
-    }
-  }
-
-}
-
-
-
-@media screen and (min-width:375px) and (max-width: 767px) {
-  .common_list {
-    margin-bottom: 0;
-    flex-direction: column !important;
-  }
-
-  .search_common {
-    .common_list:last-child {
-      display: none !important;
-    }
-  }
-
-  .search_suggest {
-    .common_list:last-child {
-      display: none !important;
-    }
-  }
-
-  .common_item {
-    margin-bottom: 20px;
-  }
-
-}
-
-.common_list {
-  margin-bottom: 20px;
-
-  @media screen and (min-width:375px) and (max-width: 767px) {
-    margin-bottom: 0;
-    flex-direction: column !important;
-
-
-    .search_common {
-      .common_list:last-child {
-        display: none !important;
-      }
-    }
-
-    .search_suggest {
-      .common_list:last-child {
-        display: none !important;
-      }
+    & img {
+      width: 115px;
+      height: 115px;
     }
 
     .common_item {
-      margin-bottom: 20px;
-    }
+      margin-left: 20px;
 
-  }
+      .item_text {
+        margin-bottom: 11px;
 
+        & ul {
+          & li {
+            color: #202F2C;
+            font-size: 13px;
 
+            & a {
+              font-size: 16px;
+              color: #202F2C;
+              font-weight: 500;
 
-  @media screen and (min-width: 768px) and (max-width: 1366px) {
-    margin-bottom: 0;
-    flex-direction: column !important;
-  }
+            }
+          }
+        }
+      }
 
-  .common_item {
-    width: 300px;
-    height: 125px;
-    padding: 10px;
-    background-color: #E6E4DA;
-    justify-content: space-between;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    margin-left: 20px;
+      .fruit_ratings_css_top {
+        font-size: 18px;
+        margin-right: 10px;
 
-    @media screen and (max-width:374px) {
-      width: 220px;
-    }
+        @media #{$lt_xs} {
+          font-size: 14px;
+        }
 
-    @media screen and (min-width: 768px) and (max-width: 1366px) {
-      width: 450px;
-      margin-bottom: 20px;
-    }
-
-    & img {
-      width: 124px;
-      height: 107px;
-    }
-
-    & p {
-      font-size: 16px;
-      font-weight: 600;
+        span {
+          font-size: 25px;
+          background: linear-gradient(to top, #daa461 100%, #daa461 0%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16);
+        }
+      }
     }
   }
 }
+
+
+
+.search_result {
+  padding-left: 100px;
+
+  .search_result_item {
+    border: 2px solid #202F2C;
+    border-radius: 10px;
+    padding: 20px;
+
+    & h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #063022;
+    }
+
+    .statistic_right {
+      position: relative;
+      flex: 1;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      display: flex;
+
+      .table_lable {
+        font-size: 16px;
+        color: #063022;
+        font-weight: 600;
+        padding-right: 100px;
+      }
+
+      .table_detail {
+        font-size: 16px;
+        color: #063022;
+      }
+
+      @media (max-width: 430px) {
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .regions_fruit_icon {
+        margin-top: 35px;
+      }
+    }
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 ::ng-deep .cdk-overlay-pane {
@@ -148,9 +150,9 @@
 
 
   .mat-autocomplete-panel.mat-autocomplete-visible {
-    margin-top: 25px !important;
+    margin-top: 55px !important;
     border-radius: 10px;
-    height: 500px;
+    height: 8300px;
   }
 
   .mat-option {
@@ -164,7 +166,7 @@
   }
 
   .mat-autocomplete-panel {
-    max-height: 530px;
+    max-height: 830px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 
@@ -197,7 +199,7 @@
 .backdrop_show {
   background-color: rgba(0, 0, 0, 0.4) !important;
   position: absolute;
-  top: 0;
+  top: 7vh;
   bottom: 0;
   left: 0;
   right: 0;
@@ -261,7 +263,7 @@
 }
 
 .fruit_text {
-  padding-left: 30px;
+
   margin-bottom: 15px;
   color: #909090;
 
@@ -350,7 +352,7 @@
   width: 80%;
 
   .fruit_text {
-    padding-left: 30px;
+
 
     @media #{$lt_md} {
       padding-left: 0;

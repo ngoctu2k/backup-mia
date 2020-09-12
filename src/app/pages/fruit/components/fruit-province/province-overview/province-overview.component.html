@@ -1,159 +1,165 @@
 <div class="province_detail">
-    <mat-tab-group [(selectedIndex)]=selectedIndex>
-        <mat-tab label="Tổng quan" fxLayout="column">
-            <div class="province_detail_overview">
-                <div class="province_overview_video">
-                    <img src="assets/images/overview-region.png" alt="">
-                    <!-- <div class="play_btn">
+  <mat-tab-group [(selectedIndex)]=selectedIndex>
+    <mat-tab label="Tổng quan" fxLayout="column">
+      <div class="province_detail_overview">
+        <div class="province_overview_video">
+          <img src="assets/images/overview-region.png" alt="">
+          <!-- <div class="play_btn">
                           </div>
                           <span class="overview-icon"><i class="fas fa-play"></i></span> -->
-                </div>
-                <div class="province_overview_statistic" fxLayout="column">
-                    <div class="overview_title">
-                        <h4 class="text-center">Hải Dương </h4>
-                    </div>
-                    <div class="overview_detail">
-                        <div>
-                            <label for="">Số lượng tỉnh/ thành phố:</label>
-                            <span>11 tỉnh/ thành phố</span>
-                        </div>
-                        <div>
-                            <label for="">Diện tích:</label>
-                            <span>350.000 km2</span>
-                        </div>
-                        <div>
-                            <label for="">Khí hậu:</label>
-                            <span>Nhiệt đới ẩm</span>
-                        </div>
-                        <div>
-                            <label for="">Dân số:</label>
-                            <span>12.800.000 người</span>
-                        </div>
-                        <div>
-                            <label for="">Thổ nhưỡng:</label>
-                            <span>Nhiệt đới ẩm</span>
-                        </div>
-                        <div>
-                            <label for="">Số lượng trái cây:</label>
-                            <span>15 loại</span>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="province_overview_statistic" fxLayout="column">
+          <div class="overview_title">
+            <h4 class="text-center">Hải Dương </h4>
+          </div>
+          <div class="overview_detail">
+            <div>
+              <label for="">Số lượng tỉnh/ thành phố:</label>
+              <span>11 tỉnh/ thành phố</span>
             </div>
-        </mat-tab>
-        <mat-tab label="Vùng/Miền">
-            <p class="fruit_total">Tổng: <span>15 loại trái cây</span> </p>
-            <div class="regions_statistic">
-                <ul>
-                    <li *ngFor="let item of numberArr | paginate : regionConf;let i = index" class="regions_statistic_list">
-                        <div class="statistic_detail">
-                            <div class="region_name">
-                                <h3>Hà Giang</h3>
-                                <span class="regions_index" fxLayoutAlign="center">{{i + 1}}</span>
-                            </div>
-                            <div class="statistic_right">
-                                <table class="regions_table">
-                                    <tr>
-                                        <td class="table_lable">Diện tích:</td>
-                                        <td class="table_detail">2500 km2</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table_lable">Khí hậu:</td>
-                                        <td class="table_detail">Nhiệt đới ẩm</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table_lable">Loại trái cây:</td>
-                                        <td class="table_detail">1 loại</td>
-                                    </tr>
-                                </table>
-                                <div class="regions_fruit_icon">
-                                    <img src="assets/images/Path 18173.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            <div>
+              <label for="">Diện tích:</label>
+              <span>350.000 km2</span>
             </div>
+            <div>
+              <label for="">Khí hậu:</label>
+              <span>Nhiệt đới ẩm</span>
+            </div>
+            <div>
+              <label for="">Dân số:</label>
+              <span>12.800.000 người</span>
+            </div>
+            <div>
+              <label for="">Thổ nhưỡng:</label>
+              <span>Nhiệt đới ẩm</span>
+            </div>
+            <div>
+              <label for="">Số lượng trái cây:</label>
+              <span>15 loại</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Vùng/Miền">
+      <p class="fruit_total">Tổng: <span>15 loại trái cây</span> </p>
+      <div class="regions_statistic">
+        <ul>
+          <li *ngFor="let item of numberArr | paginate : regionConf;let i = index" class="regions_statistic_list">
+            <div class="statistic_detail">
+              <div class="region_name">
+                <h3>Hà Giang</h3>
+                <span class="regions_index" fxLayoutAlign="center">{{i + 1}}</span>
+              </div>
+              <div class="statistic_right">
+                <table class="regions_table">
+                  <tr>
+                    <td class="table_lable">Diện tích:</td>
+                    <td class="table_detail">2500 km2</td>
+                  </tr>
+                  <tr>
+                    <td class="table_lable">Khí hậu:</td>
+                    <td class="table_detail">Nhiệt đới ẩm</td>
+                  </tr>
+                  <tr>
+                    <td class="table_lable">Loại trái cây:</td>
+                    <td class="table_detail">1 loại</td>
+                  </tr>
+                </table>
+                <div class="regions_fruit_icon">
+                  <img src="assets/images/Path 18173.png" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-            <pagination-template class="fruit_pagination" #prg="paginationApi" (pageChange)="regionConf.currentPage = $event" [id]="regionConf.id">
-                <ul class="pagination_list" fxLayout="row" fxLayoutAlign="center center">
-                    <div>
-                        <li class="page_item page_item_previous">
-                            <a class="page_link" aria-label="Previous" (click)="prg.previous()">
+      <pagination-template class="fruit_pagination" #prg="paginationApi" (pageChange)="regionConf.currentPage = $event"
+        [id]="regionConf.id">
+        <ul class="pagination_list" fxLayout="row" fxLayoutAlign="center center">
+          <div>
+            <li class="page_item page_item_previous">
+              <a class="page_link" aria-label="Previous" (click)="prg.previous()">
                 Trước
               </a>
-                        </li>
-                    </div>
+            </li>
+          </div>
 
-                    <div *ngFor="let page of prg.pages" [class.active]="prg.getCurrent() === page.value">
-                        <li class="page_item">
-                            <a class="page_link" (click)="prg.setCurrent(page.value)" [class.disabled]="prg.getCurrent() === page.value" *ngIf="prg.getCurrent() !== page.value">{{ page.label }}</a>
-                            <a class="page_link" *ngIf="prg.getCurrent() === page.value">{{ page.label }}</a>
-                        </li>
-                    </div>
-                    <div>
-                        <li class="page_item page_item_next">
-                            <a class="page_link" aria-label="Next" (click)="prg.next()">
+          <div *ngFor="let page of prg.pages" [class.active]="prg.getCurrent() === page.value">
+            <li class="page_item">
+              <a class="page_link" (click)="prg.setCurrent(page.value)"
+                [class.disabled]="prg.getCurrent() === page.value"
+                *ngIf="prg.getCurrent() !== page.value">{{ page.label }}</a>
+              <a class="page_link" *ngIf="prg.getCurrent() === page.value">{{ page.label }}</a>
+            </li>
+          </div>
+          <div>
+            <li class="page_item page_item_next">
+              <a class="page_link" aria-label="Next" (click)="prg.next()">
                 Sau
               </a>
-                        </li>
-                    </div>
-                </ul>
-            </pagination-template>
-        </mat-tab>
-        <mat-tab label="Trái cây">
-            <p class="fruit_total">Tổng: <span>15 loại trái cây</span> </p>
-            <div class="fruit">
-                <div class="fruit_list">
-                    <div class="list_item" style="position: relative; margin-bottom: 20px;" *ngFor="let item of list| paginate
+            </li>
+          </div>
+        </ul>
+      </pagination-template>
+    </mat-tab>
+    <mat-tab label="Trái cây">
+      <p class="fruit_total">Tổng: <span>15 loại trái cây</span> </p>
+      <div class="fruit">
+        <div class="fruit_list">
+          <div class="list_item" style="position: relative; margin-bottom: 20px;" *ngFor="let item of list| paginate
                           : fruitConf ; let i = index ">
-                        <div class="fruit_type">{{i + 1}}</div>
-                        <div class="fruit_item" (click)="handleDetailFruit()" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="center">
-                            <div class="fruit_item_text" fxFlexAlign.lt-sm="center">
-                                <h4>Chuối Laba Đà Lạt</h4>
-                                <p class="fruit_code">Mã: <span>25896866</span></p>
-                                <div class="fruit_ratings_css">
-                                    <p>Đánh giá :</p>
-                                    <div class="fruit_ratings_css_top">
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="fruit_item_img">
-                                <img src="assets/images/engin-akyurt-4yTKah43Y2o-unsplash.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+            <div class="fruit_type">{{i + 1}}</div>
+            <div class="fruit_item" (click)="handleDetailFruit()" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="center">
+              <div class="fruit_item_text" fxFlexAlign.lt-sm="center">
+                <h4>Chuối Laba Đà Lạt</h4>
+                <p class="fruit_code">Mã: <span>25896866</span></p>
+                <div class="fruit_ratings_css">
+                  <p>Đánh giá :</p>
+                  <div class="fruit_ratings_css_top">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
                 </div>
-                <pagination-template class="fruit_pagination" #pg="paginationApi" (pageChange)="fruitConf.currentPage = $event" [id]="fruitConf.id">
-                    <ul class="pagination_list" fxLayout="row" fxLayoutAlign="center center">
-                        <div>
-                            <li class="page_item page_item_previous">
-                                <a class="page_link" aria-label="Previous" (click)="pg.previous()">
+              </div>
+              <div class="fruit_item_img">
+                <img src="assets/images/engin-akyurt-4yTKah43Y2o-unsplash.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <pagination-template class="fruit_pagination" #pg="paginationApi" (pageChange)="fruitConf.currentPage = $event"
+          [id]="fruitConf.id">
+          <ul class="pagination_list" fxLayout="row" fxLayoutAlign="center center">
+            <div>
+              <li class="page_item page_item_previous">
+                <a class="page_link" aria-label="Previous" (click)="pg.previous()">
                   Trước
                 </a>
-                            </li>
-                        </div>
-                        <div *ngFor="let page of pg.pages" [class.active]="pg.getCurrent() === page.value">
-                            <li class="page_item">
-                                <a class="page_link" (click)="pg.setCurrent(page.value)" [class.disabled]="pg.getCurrent() === page.value" *ngIf="pg.getCurrent() !== page.value">{{ page.label }}</a>
-                                <a class="page_link" *ngIf="pg.getCurrent() === page.value">{{ page.label }}</a>
-                            </li>
-                        </div>
-                        <div>
-                            <li class="page_item page_item_next">
-                                <a class="page_link" aria-label="Next" (click)="pg.next()">
+              </li>
+            </div>
+            <div *ngFor="let page of pg.pages" [class.active]="pg.getCurrent() === page.value">
+              <li class="page_item">
+                <a class="page_link" (click)="pg.setCurrent(page.value)"
+                  [class.disabled]="pg.getCurrent() === page.value"
+                  *ngIf="pg.getCurrent() !== page.value">{{ page.label }}</a>
+                <a class="page_link" *ngIf="pg.getCurrent() === page.value">{{ page.label }}</a>
+              </li>
+            </div>
+            <div>
+              <li class="page_item page_item_next">
+                <a class="page_link" aria-label="Next" (click)="pg.next()">
                   Sau
                 </a>
-                            </li>
-                        </div>
-                    </ul>
-                </pagination-template>
+              </li>
             </div>
-        </mat-tab>
-    </mat-tab-group>
+          </ul>
+        </pagination-template>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </div>
