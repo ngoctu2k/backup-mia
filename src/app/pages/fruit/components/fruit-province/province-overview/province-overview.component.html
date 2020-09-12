@@ -114,7 +114,27 @@
                 </div>
             </carousel>
             <div class="province__list">
-                <div class="province__item" *ngFor="let item of list">
+                <div class="search_common_list d-flex" *ngFor="let item of lists">
+                    <img [src]=item.image alt="">
+                    <div class="common_item">
+                        <div class="item_text">
+                            <ul>
+                                <li><a href="">{{item.name}}</a></li>
+                                <li>Khu vực : </li>
+                                <li>Thời gian mùa vụ :</li>
+                                <li>Số lượng :</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="fruit_ratings_css_top">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </mat-tab>

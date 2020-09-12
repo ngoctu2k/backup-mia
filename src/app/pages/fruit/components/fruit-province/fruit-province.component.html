@@ -1,9 +1,9 @@
 <div fxLayout="row" fxFlex="100" fxFlex.lt-md="100" fxLayout.lt-md="column" fxLayoutGap="15px">
-  <app-province-map fxFlex="55" fxFlex.lt-md="100"></app-province-map>
-  <!-- End Map -->
-  <!--  Start overview-->
-  <app-province-overview fxFlex="43" fxFlex.lt-md="100" [isDetail]="isDetail"
-    (showFruitDetail)="handleDetailFruit($event)" *ngIf="isDetail === false"></app-province-overview>
-  <app-fruit-detail fxFlex="43" fxFlex.lt-md="100" *ngIf="isDetail === true"></app-fruit-detail>
-  <!-- <div fxFlex="10" fxHide.lt-md></div> -->
+    <app-province-map fxFlex="65" fxFlex.lt-md="100"></app-province-map>
+    <!-- End Map -->
+    <!--  Start overview-->
+    <app-province-overview fxFlex="35" fxFlex.lt-md="100" [isDetail]="isDetail" (showFruitDetail)="handleDetailFruit($event)" *ngIf="isDetail === false"></app-province-overview>
+    <!-- detail -->
+    <!-- <app-fruit-detail fxFlex="43" fxFlex.lt-md="100" *ngIf="isDetail === true"></app-fruit-detail> -->
+    <!-- <div fxFlex="10" fxHide.lt-md></div> -->
 </div>

@@ -32,6 +32,29 @@ export class ProvinceOverviewComponent implements OnInit {
   numberArr = [
     1, 2, 3, 4, 5, 6,
   ];
+  lists = [
+    {
+      name: "Xoài Tứ Qúy",
+      image: "assets/images/slider1.png"
+    },
+    {
+      name: "Đào Tiên Tửu",
+      image: "assets/images/slider2.png"
+    },
+    {
+      name: "Thanh Long",
+      image: "assets/images/slider3.png"
+    },
+    {
+      name: "Bưởi Phú Diễn",
+      image: "assets/images/slider4.png"
+    },
+    {
+      name: "Mít Mê Linh",
+      image: "assets/images/slider1.png"
+    },
+
+  ]
   constructor() { }
 
   ngOnInit(): void {
