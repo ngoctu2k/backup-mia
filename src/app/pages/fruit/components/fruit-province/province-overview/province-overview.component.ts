@@ -15,7 +15,7 @@ export class ProvinceOverviewComponent implements OnInit {
   // Is show fruit details
   @Input() isDetail: boolean;
   @Output() showFruitDetail = new EventEmitter<boolean>();
-  @Input() selectedIndex = 0;
+  @Input() selectedIndex = 2;
   public regionConf: PaginationInstance = {
     id: 'region',
     itemsPerPage: 5,
