@@ -3,6 +3,7 @@ import { select } from 'd3';
 import { DrawMapService } from 'src/app/shared/services/draw-map.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { SharedDataService } from 'src/app/shared/services/shared-data.service';
+import { FruitService } from '../../../services/fruit.service';
 
 @Component({
   selector: 'app-province-map',
@@ -13,10 +14,13 @@ export class ProvinceMapComponent implements OnInit, OnDestroy {
   provinceId: string;
   provinceName: string;
   provinceLink: string;
+  fruitDetail;
+  list;
   constructor(
     private drawMap: DrawMapService,
     private router: Router,
     private sharedData: SharedDataService,
+    private fruitService: FruitService,
     private route: ActivatedRoute) {
 
   }
@@ -24,6 +28,15 @@ export class ProvinceMapComponent implements OnInit, OnDestroy {
     this.route.paramMap.subscribe(paramMap => {
       this.provinceLink = paramMap.get('province');
     });
+    this.fruitService.list().subscribe(res=>{
+      this.fruitDetail = res;
+      console.log(this.fruitDetail);
+    })
+    this.sharedData.shareFruitDetail.subscribe(val=>{
+      this.fruitDetail = val;
+      console.log(this.fruitDetail);
+    })
+
     console.log(this.provinceLink);
     const re = /\-/gi;
     const newProvinceLink = this.provinceLink.replace(re, '_');

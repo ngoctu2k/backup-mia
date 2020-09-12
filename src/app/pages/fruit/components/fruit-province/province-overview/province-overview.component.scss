@@ -415,6 +415,13 @@
      ::ng-deep {
         .carousel-arrow {
             background-color: #06332e;
+            background-image: none;
+        }
+        .carousel-arrow-prev {
+            background-image: url("../../../../../../assets/images/keyboard_arrow_left-24px.svg") !important;
+        }
+        .carousel-arrow-next {
+            background-image: url("../../../../../../assets/images/keyboard_arrow_right-24px.svg") !important;
         }
     }
 }
@@ -433,10 +440,26 @@
     background-color: #fff;
     border-radius: 10px;
     margin: 0 20px 20px 20px;
+    padding: 5px 0;
+    .list__all {
+        height: 550px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 }
 
 .search_common_list {
-    margin-top: 15px;
+    margin-top: 10px;
+    padding-left: 20px;
+    margin-right: 20px;
+    border-radius: 0 10px 10px 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &:hover {
+        background-color: #f3f8f2;
+    }
     & img {
         width: 115px;
         height: 115px;
@@ -444,14 +467,14 @@
     .common_item {
         margin-left: 20px;
         .item_text {
-            margin-bottom: 11px;
-            & ul {
-                & li {
-                    color: #202F2C;
-                    font-size: 13px;
-                    & a {
-                        font-size: 16px;
-                        color: #202F2C;
+            margin-bottom: 10px;
+            ul {
+                li {
+                    color: #192e29;
+                    font-size: 16px;
+                    a {
+                        font-size: 18px;
+                        color: #051c16;
                         font-weight: 500;
                     }
                 }
@@ -464,11 +487,15 @@
                 font-size: 14px;
             }
             span {
-                font-size: 25px;
-                background: linear-gradient(to top, #daa461 100%, #daa461 0%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16);
+                font-size: 20px;
+                color: #ebb43d;
+                padding-right: 10px;
+            }
+            span:nth-child(4) {
+                color: #cfcfcf;
+            }
+            span:nth-child(5) {
+                color: #cfcfcf;
             }
         }
     }

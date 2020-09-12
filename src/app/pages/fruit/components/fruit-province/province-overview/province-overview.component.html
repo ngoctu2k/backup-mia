@@ -102,7 +102,7 @@
             </pagination-template>
         </mat-tab>
         <mat-tab label="Trái cây">
-            <carousel [cellWidth]="700" [width]="700" [height]="200" class="carousel-overview m-auto">
+            <carousel [cellWidth]="700" [width]="700" [arrowsTheme]="'light'" [height]="180" class="carousel-overview m-auto">
                 <div class="carousel-cell">
                     <h3 class="province">Hà Giang</h3>
                 </div>
@@ -114,25 +114,25 @@
                 </div>
             </carousel>
             <div class="province__list">
-                <div class="search_common_list d-flex" *ngFor="let item of lists">
-                    <img [src]=item.image alt="">
-                    <div class="common_item">
-                        <div class="item_text">
-                            <ul>
-                                <li><a href="">{{item.name}}</a></li>
-                                <li>Khu vực : </li>
-                                <li>Thời gian mùa vụ :</li>
-                                <li>Số lượng :</li>
-                            </ul>
-
-                        </div>
-
-                        <div class="fruit_ratings_css_top">
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
+                <div class="list__all">
+                    <div class="search_common_list d-flex" *ngFor="let item of lists" (click)="getFruit(item)">
+                        <img [src]=item.MediaUrl alt="">
+                        <div class="common_item">
+                            <div class="item_text">
+                                <ul>
+                                    <li><a href="">{{item.Name}}</a></li>
+                                    <li>Khu vực : </li>
+                                    <li>Thời gian mùa vụ :</li>
+                                    <li>Số lượng :</li>
+                                </ul>
+                            </div>
+                            <div class="fruit_ratings_css_top">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                            </div>
                         </div>
                     </div>
                 </div>
