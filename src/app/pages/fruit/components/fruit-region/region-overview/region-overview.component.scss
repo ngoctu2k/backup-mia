@@ -18,7 +18,7 @@
         overflow: hidden;
     }
     .mat-tab-label-container {
-        padding: 10px 30px 0 30px;
+        padding: 30px 30px 0 30px;
     }
     .mat-tab-label-active {
         opacity: 1;
@@ -84,32 +84,36 @@
     padding-left: 40px;
 }
 
+$colortext: #05342D;
 // mat tab
 // Tổng uan
 .region_overview {
-    padding: 0 30px;
+    padding-left: 30px;
+    padding-right: 50px;
     .region_overview_head {
         margin-bottom: 80px;
         .region_overview_title {
             margin-top: 30px;
             margin-bottom: 30px;
-            font-size: 48px;
+            font-size: 45px;
+            line-height: normal;
             font-weight: 500;
-            color: #06342a;
+            color: $colortext;
             text-transform: capitalize;
         }
         .region_overview_description {
-            font-size: 18px;
-            line-height: 32px;
-            color: #06342a;
+            font-size: 16px;
+            line-height: 30px;
+            color: $colortext;
+            font-weight: 400;
         }
     }
     .region_overview_carousel {
         h4 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 400;
             margin-bottom: 20px;
-            color: #06342a;
+            color: $colortext;
         }
         img {
             border-radius: 10px;
@@ -122,7 +126,7 @@
             height: 40px;
             line-height: 40px;
             padding-left: 40px;
-            background-color: #06342a;
+            background-color: $colortext;
             border-radius: 50px;
             color: #fff;
             font-size: 18px;
@@ -145,7 +149,7 @@
                     }
                     span {
                         font-size: 18px;
-                        color: #06342a;
+                        color: $colortext;
                     }
                     &[data-title] {
                         span {
@@ -171,14 +175,15 @@
                 justify-content: center;
                 align-items: center;
                 h3 {
-                    font-size: 72px;
-                    font-weight: 600;
+                    font-size: 45px;
+                    font-weight: 400;
                     line-height: normal;
-                    color: #06342a;
+                    color: $colortext;
                 }
                 p {
-                    font-size: 21px;
-                    color: #06342a;
+                    font-size: 20px;
+                    color: $colortext;
+                    font-weight: 300;
                 }
             }
         }
@@ -196,10 +201,10 @@
             padding-right: 20px;
             li {
                 height: 150px;
-                padding-left: 15px;
+                padding-left: 20px;
                 padding-right: 20px;
                 padding-top: 20px;
-                padding-bottom: 20px;
+                padding-bottom: 15px;
                 margin-bottom: 20px;
                 border-top-right-radius: 10px;
                 border-bottom-right-radius: 10px;
@@ -209,18 +214,18 @@
                 div {
                     position: relative;
                     h4 {
-                        font-size: 32px;
-                        font-weight: 600;
-                        color: #06342a;
+                        font-size: 30px;
+                        font-weight: bold;
+                        color: $colortext;
                     }
                     .table_matregions {
                         width: 50%;
                         tr {
                             td {
                                 span {
-                                    font-size: 18px;
-                                    color: #06342a;
-                                    font-weight: 600;
+                                    font-size: 15px;
+                                    color: $colortext;
+                                    font-weight: bold;
                                 }
                             }
                             &[data-title] {
@@ -232,6 +237,8 @@
                         position: absolute;
                         right: 0;
                         bottom: 0;
+                        font-size: 12px;
+                        font-weight: 400;
                         color: #0b3f3d;
                         display: flex;
                         align-items: center;
