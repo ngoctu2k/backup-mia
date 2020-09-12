@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { PaginationInstance } from 'ngx-pagination';
+import { SharedDataService } from 'src/app/shared/services/shared-data.service';
+import { FruitService } from '../../../services/fruit.service';
 
 @Component({
   selector: 'app-province-overview',
@@ -32,11 +34,26 @@ export class ProvinceOverviewComponent implements OnInit {
   numberArr = [
     1, 2, 3, 4, 5, 6,
   ];
-  constructor() { }
+  detailFruit;
+  lists;
+  constructor(
+    private fruitService: FruitService,
+    private shareService: SharedDataService
+    ) { }
 
   ngOnInit(): void {
-  }
+    this.fruitService.list().subscribe(res=>{
+      this.lists = res;
+      console.log(this.lists);
 
+    })
+
+  }
+  getFruit(item){
+    this.detailFruit=item;
+    this.shareService.setDetail(item);
+    console.log(this.detailFruit);
+  }
   handleDetailFruit() {
     this.isDetail = true;
     this.selectedIndex = 2;

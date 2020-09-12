@@ -20,6 +20,11 @@ export class SharedDataService {
   });
   params = this._params.asObservable();
 
+  private fruitDetail = new BehaviorSubject<any>({
+
+  })
+  shareFruitDetail  = this.fruitDetail.asObservable();
+
   constructor() { }
 
   nextMessage(a: any) {
@@ -28,5 +33,8 @@ export class SharedDataService {
 
   setDataParams(data: any) {
     this._params.next(data);
+  }
+  setDetail(val:any){
+    this.fruitDetail.next(val);
   }
 }
