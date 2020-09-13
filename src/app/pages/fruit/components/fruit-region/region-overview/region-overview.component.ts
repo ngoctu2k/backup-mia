@@ -20,29 +20,26 @@ export class RegionOverviewComponent implements OnInit {
   @Input() selectedIndex: number;
   listProvince;
   idProvince;
-  public regionConf: PaginationInstance = {
-    id: 'region',
-    itemsPerPage: 5,
-    currentPage: 1
-  };
-  public fruitConf: PaginationInstance = {
-    id: 'fruit',
-    itemsPerPage: 5,
-    currentPage: 1
-  };
-  numberArr = [
-    1, 2, 3, 4, 5, 6,
-  ];
- 
-  constructor(private provinceService :ProvinceService,
-    private shareService: SharedDataService) { }
+  // public regionConf: PaginationInstance = {
+  //   id: 'region',
+  //   itemsPerPage: 5,
+  //   currentPage: 1
+  // };
+  // public fruitConf: PaginationInstance = {
+  //   id: 'fruit',
+  //   itemsPerPage: 5,
+  //   currentPage: 1
+  // };
+  // numberArr = [
+  //   1, 2, 3, 4, 5, 6,
+  // ];
 
+  constructor(private provinceService :ProvinceService) { }
   ngOnInit(): void {
     this.provinceService.getProvince().subscribe(
       res => {
         this.listProvince = res;
         console.log(this.listProvince);
-        
       }
     )
   }
@@ -53,8 +50,5 @@ export class RegionOverviewComponent implements OnInit {
     this.selectedIndex = 2;
     this.showFruitDetail.emit(this.isDetail);
   }
-  getId(province){
-    this.idProvince = province.ProvinceId; 
-    this.shareService.setProvinceId(province.ProvinceId);
-  }
+
 }

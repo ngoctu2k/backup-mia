@@ -9,6 +9,7 @@ import { SharedDataService } from "../../../../shared/services/shared-data.servi
 export class FruitNationComponent implements OnInit {
   isDetail = false;
   selectedIndex = 0;
+
   constructor(private sharedService: SharedDataService) { }
 
   ngOnInit(): void {

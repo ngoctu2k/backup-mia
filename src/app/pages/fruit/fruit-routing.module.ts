@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ActivatedRoute } from '@angular/router';
 import { FruitComponent } from './fruit.component';
 import { FruitNationComponent } from './components/fruit-nation/fruit-nation.component';
 import { FruitRegionComponent } from './components/fruit-region/fruit-region.component';
@@ -39,4 +39,6 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class FruitRoutingModule { }
+export class FruitRoutingModule {
+
+}

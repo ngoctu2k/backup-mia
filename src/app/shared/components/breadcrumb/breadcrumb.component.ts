@@ -4,7 +4,6 @@ import { Subscription } from 'rxjs';
 import { distinctUntilChanged, filter, map } from 'rxjs/operators';
 import { IBreadCrumb } from './breadcrumb.interface';
 import { Province } from './province.data';
-
 @Component({
   selector: 'app-breadcrumb',
   templateUrl: './breadcrumb.component.html',
@@ -31,7 +30,6 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
       this.breadcrumbs = this.buildBreadCrumb(this.activatedRoute.root);
     });
   }
-
   ngOnInit() {
     this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd),
@@ -40,7 +38,6 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
       this.breadcrumbs = this.buildBreadCrumb(this.activatedRoute.root);
     });
   }
-
   ngOnDestroy(): void {
     if (this.subcription) {
       this.subcription.unsubscribe();
@@ -64,7 +61,6 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
     const lastRoutePart = path.split('/').pop();
     const replaceId = path.split('/');
     const isDynamicRoute = lastRoutePart.startsWith(':');
-
     if (isDynamicRoute && !!route.snapshot) {
       const paramName = lastRoutePart.split(':')[1];
       if (route.firstChild) {
@@ -75,7 +71,6 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
         path = path.replace(lastRoutePart, route.snapshot.params[paramName]);
       }
       const province = this.provinceData.find(o => o.slug === route.snapshot.params.province);
-
       const labelBreab = route.snapshot.params.regions;
       // console.log(path);
       if (labelBreab && !province) {
@@ -149,11 +144,9 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
         this.router.navigateByUrl('/pages/fruit');
       }
     }
-
     // In the routeConfig the complete path is not available,
     // so we rebuild it each time
     const nextUrl = path ? `${url}/${path}` : url;
-
     const breadcrumb: IBreadCrumb = {
       label,
       url: `fruit/${nextUrl}`,
@@ -172,7 +165,6 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
       label: labelProvince,
       url: `fruit/${nextUrl}`,
     }];
-
     if (route.snapshot.params.regions || route.snapshot.params.province) {
       newBreadcrumbs = [{
         label: 'Việt Nam',
@@ -189,11 +181,9 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
     } else {
       newBreadcrumbs = breadcrumb.label ? [...breadcrumbs, breadcrumb] : [...breadcrumbs];
     }
-
-
+    console.log(this.breadcrumbs);
     if (route.firstChild) {
       // rescursive build bread
-
       return this.buildBreadCrumb(route.firstChild, nextUrl, newBreadcrumbs);
     }
     return newBreadcrumbs;

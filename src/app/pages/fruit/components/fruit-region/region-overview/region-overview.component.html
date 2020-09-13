@@ -85,30 +85,32 @@
                 </div>
                 <div class="matregions_list">
                     <ul>
-                        <li *ngFor="let province of listProvince" (click)="getId(province);">
-                            <div>
-                                <h4>{{province.Name}}</h4>
-                                <table id="" class="table_matregions">
-                                    <tbody>
-                                        <tr>
-                                            <td class="product-name"> <span>Diện tích:</span></td>
-                                            <td class="product-name" data-title="Diện tích:"> <span>2500 km2</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-name"> <span>Khí hậu:</span></td>
-                                            <td class="product-name" data-title="Nhiệt đới ẩm:"> <span>Nhiệt đới ẩm</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="product-name"> <span>Loại trái cây:</span></td>
-                                            <td class="product-name" data-title="loại trái cây"> <span>10 loại</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href=""><img src="assets/images/food-and-restaurant.png" alt=""> Trái cây ở Hà giang
+                        <li *ngFor="let province of listProvince">
+                            <a [routerLink]="province.ProvinceId">
+                                <div>
+                                    <h4>{{province.Name}}</h4>
+                                    <table id="" class="table_matregions">
+                                        <tbody>
+                                            <tr>
+                                                <td class="product-name"> <span>Diện tích:</span></td>
+                                                <td class="product-name" data-title="Diện tích:"> <span>2500 km2</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product-name"> <span>Khí hậu:</span></td>
+                                                <td class="product-name" data-title="Nhiệt đới ẩm:"> <span>Nhiệt đới ẩm</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product-name"> <span>Loại trái cây:</span></td>
+                                                <td class="product-name" data-title="loại trái cây"> <span>10 loại</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <a href=""><img src="assets/images/food-and-restaurant.png" alt=""> Trái cây ở Hà giang
 
-                                </a>
+                                    </a>
 
-                            </div>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
