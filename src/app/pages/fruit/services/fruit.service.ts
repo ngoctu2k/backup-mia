@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { BaseApiService } from 'src/app/shared/services/base.service';
 import { Fruit } from '../models/fruit.model';
-import { map } from 'rxjs/operators';
+
 
 
 @Injectable({providedIn:"root"})
