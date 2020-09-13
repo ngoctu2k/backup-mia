@@ -16,6 +16,7 @@ export class ProvinceMapComponent implements OnInit, OnDestroy {
   provinceLink: string;
   fruitDetail;
   list;
+  isShow = true;
   constructor(
     private drawMap: DrawMapService,
     private router: Router,
@@ -24,16 +25,21 @@ export class ProvinceMapComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute) {
 
   }
+  hide(){
+    this.isShow = true;
+    console.log(this.isShow);
+
+  }
   ngOnInit(): void {
     this.route.paramMap.subscribe(paramMap => {
       this.provinceLink = paramMap.get('province');
     });
     this.sharedData.shareFruitDetail.subscribe(val=>{
       this.fruitDetail = val;
-      console.log(this.fruitDetail);
     })
-
-    console.log(this.provinceLink);
+    this.sharedData.shareshowMap.subscribe(val=>{
+      this.isShow = val;
+    })
     const re = /\-/gi;
     const newProvinceLink = this.provinceLink.replace(re, '_');
     this.drawMap.drawProvince(
@@ -41,6 +47,7 @@ export class ProvinceMapComponent implements OnInit, OnDestroy {
       `https://raw.githubusercontent.com/vdporiginals/vietnam_geo/master/province/${newProvinceLink}.geojson`
     );
   }
+
 
   ngOnDestroy(): void {
     select('svg').remove();

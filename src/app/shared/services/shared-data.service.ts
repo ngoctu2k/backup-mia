@@ -24,6 +24,10 @@ export class SharedDataService {
 
   });
   shareFruitDetail  = this.fruitDetail.asObservable();
+  private showMap = new BehaviorSubject<any>({
+
+  });
+  shareshowMap  = this.showMap.asObservable();
 
   constructor() { }
 
@@ -36,5 +40,8 @@ export class SharedDataService {
   }
   setDetail(val:any){
     this.fruitDetail.next(val);
+  }
+  setShowMap(val:any){
+    this.showMap.next(val);
   }
 }

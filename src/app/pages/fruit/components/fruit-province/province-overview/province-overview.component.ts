@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { SharedDataService } from 'src/app/shared/services/shared-data.service';
 import { FruitService } from '../../../services/fruit.service';
 import { ProvinceService } from '../../../services/province.service';
+import { Region} from '../../../../../shared/region.data';
 
 
 @Component({
@@ -24,6 +25,10 @@ export class ProvinceOverviewComponent implements OnInit {
   listFruit;
   listProvince;
   idProvince;
+  isShow;
+  regionSlug;
+  regionId;
+  region = Region;
   constructor(
     private fruitService: FruitService,
     private provinceServce: ProvinceService,
@@ -33,12 +38,19 @@ export class ProvinceOverviewComponent implements OnInit {
 
 
   ngOnInit(): void {
-
     this.activeRoute.paramMap.subscribe((params) => {
-      this.idProvince = params.get('province')
+      this.idProvince = params.get('province');
+      this.regionSlug = params.get('regions');
       console.log(this.idProvince);
+      console.log(this.regionSlug);
+
     });
-    this.provinceServce.getProvince(this.idProvince).subscribe(res=>{
+    this.regionId = this.region.find(a=>{
+      return a.slug === this.regionSlug;
+   })
+   console.log(this.regionId);
+
+    this.provinceServce.getProvince(this.regionId.id).subscribe(res=>{
       this.listProvince = res;
       console.log(this.listProvince);
       console.log("listProvince");
@@ -47,19 +59,20 @@ export class ProvinceOverviewComponent implements OnInit {
       this.listFruit = res;
       console.log(this.listFruit);
     })
+
   }
-  getFruit(item){
-    this.detailFruit=item;
-    this.shareService.setDetail(item);
-    console.log(this.detailFruit);
-  }
-  handleDetailFruit() {
-    this.isDetail = true;
-    this.selectedIndex = 2;
-    this.showFruitDetail.emit(this.isDetail);
-  }
-  handleCarouselEvents(ev){
-    console.log(ev);
-  }
+    getFruit(item){
+      this.detailFruit=item;
+      this.shareService.setDetail(item);
+      this.shareService.setShowMap(this.isShow);
+    }
+    handleDetailFruit() {
+      this.isDetail = true;
+      this.selectedIndex = 2;
+      this.showFruitDetail.emit(this.isDetail);
+    }
+    handleCarouselEvents(ev){
+      console.log(ev);
+    }
 
 }
