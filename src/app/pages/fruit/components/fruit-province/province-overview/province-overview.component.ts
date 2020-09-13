@@ -38,6 +38,7 @@ export class ProvinceOverviewComponent implements OnInit {
   detailFruit;
   lists;
   listProvince;
+  idProvince;
   constructor(
     private fruitService: FruitService,
     private provinceServce: ProvinceService,
@@ -45,7 +46,12 @@ export class ProvinceOverviewComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.fruitService.getDetailFruit().subscribe(res =>{
+    this.shareService.shareProvinceId.subscribe(val=>{
+      this.idProvince = val;
+      console.log(this.idProvince);
+      
+    })
+    this.fruitService.getDetailFruit(this.idProvince).subscribe(res =>{
       this.lists = res;
       console.log(this.lists);
     })

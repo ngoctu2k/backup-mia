@@ -12,7 +12,7 @@ export class FruitService extends BaseApiService<Fruit>{
   constructor(public http:HttpClient){
     super(http, "api/product")
   }
-  getDetailFruit():Observable<any>{
-      return this.http.get("api/products/province/1").pipe(map((data:any) => data.Payload));
+  getDetailFruit(id):Observable<any>{
+      return this.http.get(`api/products/province/${id}`).pipe(map((data:any) => data.Payload));
   }
 }
