@@ -1,0 +1,109 @@
+::ng-deep {
+    .cdk-overlay-backdrop {
+        display: none;
+    }
+    .mat-dialog-container {
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.map_region {
+    height: 87vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background: #faf9f7;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+    padding-left: 50px;
+    padding-right: 45px;
+    padding-bottom: 45px;
+    border-radius: 20px;
+    // margin-left: 15px;
+    background-image: url("../../../../../../../../assets/images/hagiang.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: 70%;
+        bottom: 0;
+        z-index: 1;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-image: linear-gradient(to top, rgba(5, 52, 45, 1), rgba(5, 52, 45, .91), rgb(5, 52, 45, .51), rgba(255, 255, 255, .0));
+    }
+    .map_region_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 45px;
+        z-index: 10;
+        h2 {
+            color: #FFFFFF;
+            font-size: 90px;
+            line-height: normal;
+            font-weight: 400;
+            text-shadow: 0px 3px rgba(0, 0, 0, 0.16);
+            margin-bottom: 0;
+        }
+        div {
+            height: 55px;
+            padding: 0 50px;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 50px;
+            a {
+                display: flex;
+                align-items: center;
+                color: #05342D;
+                font-size: 16px;
+                font-weight: 400;
+                img {
+                    color: #05342D;
+                    margin-right: 10px;
+                }
+                .icon_chevron_right {
+                    margin-left: 10px;
+                    color: #05342D;
+                }
+            }
+        }
+    }
+    .map_region_statistics {
+        display: flex;
+        color: #fff;
+        z-index: 10;
+        .table_statistic {
+            width: 50%;
+            tr {
+                td {
+                    span {
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: bold;
+                    }
+                    &[data-title] {
+                        span {
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        .material-icons {
+            font-size: 71px;
+        }
+    }
+}

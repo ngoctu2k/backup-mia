@@ -2,6 +2,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import{ProvinceService} from '../../../services/province.service';
 import {Region} from '../../../../../shared/region.data';
 import { Router, ActivatedRoute } from '@angular/router';
+//tu
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import{RegionDialogComponent} from '../region-map/dialog/region-dialog/region-dialog.component'
 
 @Component({
   selector: 'app-region-overview',
@@ -31,7 +34,10 @@ arrImages=[
 ]
   constructor(private provinceService :ProvinceService,
     private router:Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    // tu
+    public dialog: MatDialog
+    ) { }
   ngOnInit(): void {
     this.route.paramMap.subscribe(paramMap => {
       this.regionLink = paramMap.get('regions');
@@ -54,5 +60,9 @@ arrImages=[
     this.selectedIndex = 2;
     this.showFruitDetail.emit(this.isDetail);
   }
-
+  // tu
+  openDialog(){
+    
+    this.dialog.open(RegionDialogComponent)
+  }
 }

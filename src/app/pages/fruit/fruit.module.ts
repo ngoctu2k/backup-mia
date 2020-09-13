@@ -18,6 +18,7 @@ import { NationOverviewComponent } from './components/fruit-nation/nation-overvi
 import { FruitDetailComponent } from './components/fruit-detail/fruit-detail.component';
 import { FruitInformationComponent } from './components/fruit-detail/fruit-information/fruit-information.component';
 import { FruitRelationComponent } from './components/fruit-detail/fruit-relation/fruit-relation.component';
+import { RegionDialogComponent } from './components/fruit-region/region-map/dialog/region-dialog/region-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FruitRelationComponent } from './components/fruit-detail/fruit-relation
     NationOverviewComponent,
     FruitDetailComponent,
     FruitInformationComponent,
-    FruitRelationComponent
+    FruitRelationComponent,
+    RegionDialogComponent
   ],
   imports: [
     CommonModule,

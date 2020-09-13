@@ -1,6 +1,6 @@
 @import "../../../../../shared/scss/responsive";
 ::ng-deep .region_detail {
-    background-color: #CCDFC6;
+    background-color: rgba(204, 223, 198, 0.2);
     border-radius: 20px;
     height: 87vh;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
@@ -27,6 +27,13 @@
         opacity: 1;
         border-radius: 50px;
         background: #4f6a5d;
+        color: #fff;
+        .mat-tab-label-content {
+            color: #fff;
+        }
+    }
+    .mat-tab-label-content {
+        color: rgba(5, 52, 45, 0.5);
     }
     .mat-tab-body.mat-tab-body-active {
         overflow-y: hidden;
