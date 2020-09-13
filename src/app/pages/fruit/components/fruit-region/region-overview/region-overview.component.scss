@@ -7,6 +7,9 @@
     @media #{$lt_md} {
         height: auto;
     }
+    @media (min-height:1080px) {
+        height: 50vh;
+    }
     .mat-tab-label {
         width: 50%;
         height: 44px;
@@ -14,8 +17,8 @@
             min-width: 72px;
         }
     }
-    @media #{$lt_xs} {
-        font-size: 13px;
+    .mat-tab-body-content {
+        overflow: hidden;
     }
     .mat-tab-label-container {
         padding: 30px 30px 0 30px;

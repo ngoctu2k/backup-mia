@@ -68,6 +68,9 @@
         .carousel-arrow {
             background-color: rgb(156, 151, 151) !important;
         }
+        .carousel-cells {
+            width: 100% !important;
+        }
     }
     .detail__bottom {
         background-color: #ccdec6;
@@ -100,7 +103,7 @@
         }
         .bottom__left {
             flex: 6;
-            margin-right: 30px;
+            margin-right: 90px;
             .left__title {
                 font-size: 35px;
                 font-weight: 500;
@@ -112,7 +115,7 @@
                     display: flex;
                     flex-wrap: wrap;
                     div {
-                        width: 120px;
+                        width: 150px;
                         height: 30px;
                         border-radius: 15px;
                         background-color: #05342c;
