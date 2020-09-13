@@ -9,7 +9,4 @@ export class RegionService extends BaseApiService<Region>{
     constructor(public http: HttpClient) {
         super(http, "api/GeographicRegion")
     }
-    getDetaiFruit(): Observable<any> {
-        return this.http.get("");
-    }
 }

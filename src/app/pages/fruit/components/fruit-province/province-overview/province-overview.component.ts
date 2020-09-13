@@ -45,7 +45,7 @@ export class ProvinceOverviewComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.fruitService.getDetailFruit().subscribe(res =>{
+    this.fruitService.getDetailFruit(1).subscribe(res =>{
       this.lists = res;
       console.log(this.lists);
     })
@@ -64,5 +64,8 @@ export class ProvinceOverviewComponent implements OnInit {
     this.isDetail = true;
     this.selectedIndex = 2;
     this.showFruitDetail.emit(this.isDetail);
+  }
+  handleCarouselEvents(ev){
+    console.log(ev);
   }
 }

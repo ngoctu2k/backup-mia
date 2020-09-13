@@ -5,7 +5,7 @@
         <mat-tab label="Vùng/Miền">
         </mat-tab>
         <mat-tab label="Trái cây">
-            <carousel [cellWidth]="500" [width]="500" [arrowsTheme]="'light'" [height]="180" class="carousel-overview m-auto">
+            <carousel [cellWidth]="500" [width]="500" [arrowsTheme]="'light'" [height]="180" class="carousel-overview m-auto" (events)="handleCarouselEvents($event)">
                 <div class="carousel-cell" *ngFor="let item of listProvince">
                     <h3 class="province">{{item.Name}}</h3>
                 </div>
