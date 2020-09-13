@@ -44,9 +44,7 @@ export class NationOverviewComponent implements OnInit {
     this.regionService.list().subscribe(res => {
       this.list_region = res;
       console.log(res);
-
     })
-
   }
   handleDetailFruit() {
     this.isDetail = true;

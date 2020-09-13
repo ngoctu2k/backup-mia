@@ -1,9 +1,24 @@
 <div class="bradcam_text">
     <ol class="breadcrumb" fxLayout="row" fxLayoutAlign="center center">
-        <li *ngFor="let breadcrumb of breadcrumbs; let i = index">
+        <li>
             <span>
-                <a [routerLink]="breadcrumb.url">{{ breadcrumb.label }} <span *ngIf="breadcrumb.label">/</span></a>
-            </span>
+              <a [routerLink]="['/']">Việt Nam</a>
+          </span>
         </li>
+        <li>
+            <span *ngIf="breadcrumbs[1]?.label">
+              <a [routerLink]="['/']">{{breadcrumbs[1].label}}</a>
+          </span>
+        </li>
+        <li>
+            <span *ngIf="breadcrumbs[2]?.label">
+              <a [routerLink]="['/']">{{breadcrumbs[2].label}}</a>
+          </span>
+        </li>
+        <!-- <li *ngFor="let breadcrumb of breadcrumbs; let i = index">
+          <span>
+              <a [routerLink]="breadcrumb.url">{{ breadcrumb.label }} <span *ngIf="breadcrumb.label">/</span></a>
+          </span>
+      </li> -->
     </ol>
 </div>

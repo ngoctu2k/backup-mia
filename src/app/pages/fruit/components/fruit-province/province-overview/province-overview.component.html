@@ -1,39 +1,45 @@
-<div class="province_detail">
-    <mat-tab-group [(selectedIndex)]=selectedIndex>
-        <mat-tab label="Tổng quan" fxLayout="column">
-        </mat-tab>
-        <mat-tab label="Vùng/Miền">
-        </mat-tab>
-        <mat-tab label="Trái cây">
-            <carousel [cellWidth]="500" [width]="500" [arrowsTheme]="'light'" [height]="180" class="carousel-overview m-auto" (events)="handleCarouselEvents($event)">
-                <div class="carousel-cell" *ngFor="let item of listProvince">
-                    <h3 class="province">{{item.Name}}</h3>
-                </div>
-            </carousel>
-            <div class="province__list">
-                <div class="list__all">
-                    <div class="search_common_list d-flex" *ngFor="let item of lists" (click)="getFruit(item)">
-                        <img [src]=item.MediaUrl alt="">
-                        <div class="common_item">
-                            <div class="item_text">
-                                <ul>
-                                    <li><a href="">{{item.Name}}</a></li>
-                                    <li>Khu vực : </li>
-                                    <li>Thời gian mùa vụ :</li>
-                                    <li>Số lượng :</li>
-                                </ul>
-                            </div>
-                            <div class="fruit_ratings_css_top">
-                                <span>★</span>
-                                <span>★</span>
-                                <span>★</span>
-                                <span>★</span>
-                                <span>★</span>
+<mat-dialog-content class="mat-typography">
+    <div class="province_detail">
+        <mat-tab-group [(selectedIndex)]=selectedIndex>
+            <mat-tab label="Tổng quan" fxLayout="column">
+            </mat-tab>
+            <mat-tab label="Vùng/Miền">
+            </mat-tab>
+            <mat-tab label="Trái cây">
+                <carousel [cellWidth]="500" [width]="500" [arrowsTheme]="'light'" [height]="180" class="carousel-overview m-auto" (events)="handleCarouselEvents($event)">
+                    <div class="carousel-cell" *ngFor="let item of listProvince">
+                        <h3 class="province">{{item.Name}}</h3>
+                    </div>
+                </carousel>
+                <div class="province__list">
+                    <div class="list__all">
+                        <div class="search_common_list d-flex" *ngFor="let item of listFruit" (click)="getFruit(item)">
+                            <img [src]=item.MediaUrl alt="">
+                            <div class="common_item">
+                                <div class="item_text">
+                                    <ul>
+                                        <li><a href="">{{item.Name}}</a></li>
+                                        <li>Khu vực : </li>
+                                        <li>Thời gian mùa vụ :</li>
+                                        <li>Số lượng :</li>
+                                    </ul>
+                                </div>
+                                <div class="fruit_ratings_css_top">
+                                    <span>★</span>
+                                    <span>★</span>
+                                    <span>★</span>
+                                    <span>★</span>
+                                    <span>★</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </mat-tab>
-    </mat-tab-group>
-</div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+</mat-dialog-actions>
