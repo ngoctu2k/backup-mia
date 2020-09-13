@@ -13,6 +13,6 @@ export class FruitService extends BaseApiService<Fruit>{
     super(http, "api/product")
   }
   getDetailFruit(id):Observable<any>{
-      return this.http.get(`api/products/province ${id}`).pipe(map((data:any) => data.Payload));
+      return this.http.get(`api/products/province/${id}`).pipe(map((data:any) => data.Payload));
   }
 }

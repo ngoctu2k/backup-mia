@@ -22,7 +22,11 @@ export class SharedDataService {
 
   private fruitDetail = new BehaviorSubject<any>({
 
-  })
+  });
+  private provinceId =  new BehaviorSubject<any>({
+
+  });
+  shareProvinceId = this.provinceId.asObservable();
   shareFruitDetail  = this.fruitDetail.asObservable();
 
   constructor() { }
@@ -36,5 +40,8 @@ export class SharedDataService {
   }
   setDetail(val:any){
     this.fruitDetail.next(val);
+  }
+  setProvinceId(val:any){
+    this.provinceId.next(val);
   }
 }
