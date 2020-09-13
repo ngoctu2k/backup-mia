@@ -3,7 +3,7 @@
         <mat-tab label="Tổng quan">
             <div class="region_overview">
                 <div class="region_overview_head pl-40">
-                    <h3 class="region_overview_title">Đông Bắc Bộ</h3>
+                    <h3 class="region_overview_title">{{Province.name}}</h3>
                     <p class="region_overview_description">
                         Đông Bắc bộ là vùng lãnh thổ ở phía đông bắc miền Bắc Việt Nam và ở hướng bắc vùng đồng bằng sông Hồng, Việt Nam. Gọi là đông bắc để phân biệt với vùng tây bắc, còn thực chất nó ở vào phía bắc và đông bắc của Hà Nội, rộng hơn vùng Việt Bắc. Vùng đông
                         bắc là một trong 3 tiểu vùng địa lý tự nhiên của Bắc Bộ Việt Nam.
@@ -56,50 +56,42 @@
             <div class="region_matregions">
                 <div class="region_matregions_carousel">
                     <carousel [cellWidth]="500" [width]="500" [arrowsTheme]="'light'" [height]="180" class="carousel-overview m-auto">
-                        <div class="carousel-cell ">
+                        <div class="carousel-cell " *ngFor="let item of Region">
                             <div class="d-flex justify-content-center flex-column align-content-center">
-                                <h3>Đông Bắc bộ</h3>
+                                <h3>{{item.name}}</h3>
                                 <p>12 Tỉnh thành</p>
                             </div>
-
-                        </div>
-                        <div class="carousel-cell ">
-                            <div class="d-flex justify-content-center flex-column align-content-center">
-                                <h3>Đông Bắc bộ</h3>
-                                <p>12 Tỉnh thành</p>
-                            </div>
-
                         </div>
                     </carousel>
                 </div>
                 <div class="matregions_list">
                     <ul>
                         <li *ngFor="let province of listProvince">
-                            <a [routerLink]="province.ProvinceId">
-                                <div>
-                                    <h4>{{province.Name}}</h4>
-                                    <table id="" class="table_matregions">
-                                        <tbody>
-                                            <tr>
-                                                <td class="product-name"> <span>Diện tích:</span></td>
-                                                <td class="product-name" data-title="Diện tích:"> <span>2500 km2</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="product-name"> <span>Khí hậu:</span></td>
-                                                <td class="product-name" data-title="Nhiệt đới ẩm:"> <span>Nhiệt đới ẩm</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="product-name"> <span>Loại trái cây:</span></td>
-                                                <td class="product-name" data-title="loại trái cây"> <span>10 loại</span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <a href=""><img src="assets/images/food-and-restaurant.png" alt=""> Trái cây ở Hà giang
 
-                                    </a>
+                            <div>
+                                <h4>{{province.Name}}</h4>
+                                <table id="" class="table_matregions">
+                                    <tbody>
+                                        <tr>
+                                            <td class="product-name"> <span>Diện tích:</span></td>
+                                            <td class="product-name" data-title="Diện tích:"> <span>2500 km2</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-name"> <span>Khí hậu:</span></td>
+                                            <td class="product-name" data-title="Nhiệt đới ẩm:"> <span>Nhiệt đới ẩm</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-name"> <span>Loại trái cây:</span></td>
+                                            <td class="product-name" data-title="loại trái cây"> <span>10 loại</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a [routerLink]="province.ProvinceId"><img src="assets/images/food-and-restaurant.png" alt=""> Trái cây ở Hà giang
 
-                                </div>
-                            </a>
+                                </a>
+
+                            </div>
+
                         </li>
                     </ul>
                 </div>
