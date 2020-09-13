@@ -14,7 +14,7 @@ export class ProvinceService extends BaseApiService<Province>{
     super(http, "api/province")
   }
 
-  getProvince(){
-    return this.http.get("api/province").pipe(map((data:any) => data.Payload));
+  getProvince(id){
+    return this.http.get(`api/province/Geographicregion/${id}`).pipe(map((data:any) => data.Payload));
   }
 }

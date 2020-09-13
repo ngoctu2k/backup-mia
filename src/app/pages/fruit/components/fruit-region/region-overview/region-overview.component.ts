@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { PaginationInstance } from 'ngx-pagination';
-import { SharedDataService } from 'src/app/shared/services/shared-data.service';
 import{ProvinceService} from '../../../services/province.service';
+import {Region} from '../../../../../shared/region.data';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-region-overview',
@@ -19,20 +19,9 @@ export class RegionOverviewComponent implements OnInit {
   @Output() showFruitDetail = new EventEmitter<boolean>();
   @Input() selectedIndex: number;
   listProvince;
-  idProvince;
-  // public regionConf: PaginationInstance = {
-  //   id: 'region',
-  //   itemsPerPage: 5,
-  //   currentPage: 1
-  // };
-  // public fruitConf: PaginationInstance = {
-  //   id: 'fruit',
-  //   itemsPerPage: 5,
-  //   currentPage: 1
-  // };
-  // numberArr = [
-  //   1, 2, 3, 4, 5, 6,
-  // ];
+  Province; // Tỉnh
+  regionLink; // Slug
+  Region = Region; //Region global
 arrImages=[
   "assets/images/slider1.png",
   "assets/images/slider1.png",
@@ -40,9 +29,18 @@ arrImages=[
   "assets/images/slider1.png",
 
 ]
-  constructor(private provinceService :ProvinceService) { }
+  constructor(private provinceService :ProvinceService,
+    private router:Router,
+    private route: ActivatedRoute) { }
   ngOnInit(): void {
-    this.provinceService.getProvince().subscribe(
+    this.route.paramMap.subscribe(paramMap => {
+      this.regionLink = paramMap.get('regions');
+    });
+    this.Province = this.Region.find(a=>{
+       return a.slug === this.regionLink;
+    })
+    console.log(this.Province);
+    this.provinceService.getProvince(this.Province.id).subscribe(
       res => {
         this.listProvince = res;
         console.log(this.listProvince);

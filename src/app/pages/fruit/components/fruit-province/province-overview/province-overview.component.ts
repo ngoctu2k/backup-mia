@@ -33,7 +33,8 @@ export class ProvinceOverviewComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.provinceServce.getProvince().subscribe(res=>{
+    this.provinceServce.
+    getProvince(1).subscribe(res=>{
       this.listProvince = res;
       console.log(this.listProvince);
       console.log("listProvince");
