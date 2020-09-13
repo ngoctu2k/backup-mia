@@ -1,11 +1,14 @@
 @import "../../../../../shared/scss/responsive";
 ::ng-deep .region_detail {
-    background-color: #eff4ee;
+    background-color: #faf9f7;
     border-radius: 10px;
     height: 87vh;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
     @media #{$lt_md} {
         height: auto;
+    }
+    @media (min-height:1080px) {
+        height: 50vh;
     }
     .mat-tab-label {
         width: 50%;
@@ -14,56 +17,198 @@
             min-width: 72px;
         }
     }
-    @media #{$lt_xs} {
-        font-size: 13px;
+    .mat-tab-body-content {
+        overflow: hidden;
     }
     .mat-tab-label-container {
-        padding: 10px 30px 0 30px;
+        padding: 10px 10px 0 10px;
     }
-    h4 {
-        font-weight: 600;
-        margin-bottom: 0;
-        font-size: 21px;
+    .mat-tab-label-active {
+        opacity: 1;
+        border-radius: 50px;
+        background: #4f6a5d;
+    }
+    .mat-tab-body.mat-tab-body-active {
+        overflow-y: hidden;
+    }
+    .mat-tab-list {
+        height: 44px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    .mat-ink-bar {
+        height: 4px;
+        width: 35px !important;
+        background-color: white !important;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+        left: 16.6% !important;
+        transform: translateX(-50%);
+    }
+    .mat-tab-header[ng-reflect-selected-index="1"] .mat-ink-bar {
+        transform: translateX(-50%);
+        left: 50% !important;
+    }
+    .mat-tab-header[ng-reflect-selected-index="2"] .mat-ink-bar {
+        transform: translateX(-50%);
+        left: 83.3% !important;
+    }
+    .mat-tab-label .mat-tab-label-content {
+        font-size: 20px;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        padding: 10px 0;
-        @media (min-width: 1024px) and (max-width: 1500px) {
-            font-size: 18px;
+        line-height: 44px;
+        color: #ccc;
+        font-weight: 600;
+        @media #{$xs} {
+            font-size: 16px;
         }
         @media #{$lt_xs} {
+            font-size: 13px;
+        }
+        @media #{$md} {
             font-size: 16px;
+        }
+    }
+    .mat-tab-nav-bar,
+    .mat-tab-header {
+        border-bottom: none;
+    }
+    .mat-tab-header-pagination {
+        display: none !important;
+    }
+}
+
+* {
+    font-family: "Segoe UI", sans-serif;
+}
+
+.region_detail_overview {
+    padding: 0 30px;
+    @media #{$lt_lg} {
+        padding: 0 30px 60px 30px;
+    }
+    @media #{$lt_sm} {
+        padding: 0 15px 30px 15px;
+    }
+    @media #{$md} {
+        padding: 0 15px 30px 15px;
+    }
+}
+
+.region_overview_video {
+    width: 100%;
+    height: auto;
+    padding-top: 25px;
+    img {
+        height: 480px;
+        width: 100%;
+        border-radius: 10px;
+        @media (min-width: 1024px) and (max-width: 1439px) {
+            height: 200px;
+        }
+        @media (min-width: 1440px) and (max-width: 1920px) {
+            height: 350px;
+        }
+        @media (min-height:900px) {
+            height: 250px;
+        }
+        @media #{$lt_md} {
+            height: 350px;
+        }
+        @media #{$lt_sm} {
+            height: 300px;
+        }
+        @media #{$lt_xs} {
+            height: 180px;
         }
     }
 }
 
-.overview_detail {
-    padding: 0 30px;
-    @media #{$lt_sm} {
-        padding: 0 15px;
+.region_overview_statistic {
+    margin-top: 25px;
+    background: #f2f0e6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+    position: relative;
+    padding-bottom: 100px;
+    @media #{$lt_lg} {
+        padding-bottom: 50px;
     }
-    div:first-child {
-        span {
+    @media #{$gt_md} and (max-width:1440px) {
+        margin-top: 15px;
+        padding-bottom: 20px;
+    }
+    @media #{$xs} {
+        padding-bottom: 50px;
+    }
+    @media #{$lt_xs} {
+        padding-bottom: 30px;
+    }
+    @media #{$lt_sm} {
+        margin-top: 15px;
+    }
+    .overview_title {
+        max-height: 46px;
+        margin: 10px 10px 25px 10px;
+        padding-left: 25px;
+        background-color: #e6e4da;
+        border-radius: 10px;
+        @media (max-width: 500px) {
+            text-align: center;
+            max-height: unset;
+            padding-left: 0;
+        }
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            margin: 10px 10px 10px 10px;
+        }
+        @media #{$lt_xs} {
+            margin: 10px 10px 10px 10px;
+        }
+        h4 {
+            font-weight: 600;
+            margin-bottom: 0;
+            font-size: 21px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            padding: 10px 0;
+            @media (min-width: 1024px) and (max-width: 1500px) {
+                font-size: 18px;
+            }
             @media #{$lt_xs} {
-                display: block;
-                float: none;
+                font-size: 16px;
             }
         }
     }
-    label {
-        font-weight: 400;
-        font-size: 16px;
-        margin-bottom: 0;
-        line-height: 24px;
-        @media #{$lt_xs} {
-            font-size: 14px;
+    .overview_detail {
+        padding: 0 30px;
+        @media #{$lt_sm} {
+            padding: 0 15px;
         }
-    }
-    span {
-        float: right;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 24px;
-        @media #{$lt_xs} {
-            font-size: 14px;
+        div:first-child {
+            span {
+                @media #{$lt_xs} {
+                    display: block;
+                    float: none;
+                }
+            }
+        }
+        label {
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 0;
+            line-height: 24px;
+            @media #{$lt_xs} {
+                font-size: 14px;
+            }
+        }
+        span {
+            float: right;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            @media #{$lt_xs} {
+                font-size: 14px;
+            }
         }
     }
 }
