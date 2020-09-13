@@ -43,7 +43,6 @@ export class ProvinceOverviewComponent implements OnInit {
       this.regionSlug = params.get('regions');
       console.log(this.idProvince);
       console.log(this.regionSlug);
-
     });
     this.regionId = this.region.find(a=>{
       return a.slug === this.regionSlug;
@@ -74,5 +73,4 @@ export class ProvinceOverviewComponent implements OnInit {
     handleCarouselEvents(ev){
       console.log(ev);
     }
-
 }

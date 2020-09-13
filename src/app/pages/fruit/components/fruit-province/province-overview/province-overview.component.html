@@ -1,6 +1,56 @@
 <div class="province_detail">
     <mat-tab-group [(selectedIndex)]=selectedIndex>
         <mat-tab label="Tổng quan" fxLayout="column">
+            <div class="region_overview">
+                <div class="region_overview_head pl-40">
+                    <h3 class="region_overview_title"></h3>
+                    <p class="region_overview_description">
+                        Đông Bắc bộ là vùng lãnh thổ ở phía đông bắc miền Bắc Việt Nam và ở hướng bắc vùng đồng bằng sông Hồng, Việt Nam. Gọi là đông bắc để phân biệt với vùng tây bắc, còn thực chất nó ở vào phía bắc và đông bắc của Hà Nội, rộng hơn vùng Việt Bắc. Vùng đông
+                        bắc là một trong 3 tiểu vùng địa lý tự nhiên của Bắc Bộ Việt Nam.
+                    </p>
+                </div>
+                <div class="region_overview_carousel pl-40">
+                    <h4>Trái cây đặc trưng</h4>
+                    <carousel [height]="130">
+                        <div class="carousel-cell">
+                            <img>
+                        </div>
+
+                    </carousel>
+                </div>
+                <div class="region_overview_statistic">
+                    <h4 class="statistics_heading">Thống kê số liệu</h4>
+                    <table id="" class="table_statistic">
+                        <tbody>
+                            <tr>
+                                <td class="product-name"> <span>Số lượng tỉnh/thành phố:</span></td>
+                                <td class="product-name" data-title="Số lượng tỉnh/thành phố:"> <span>11 tỉnh/thành phố</span></td>
+                            </tr>
+                            <tr>
+                                <td class="product-name"> <span>Diện tích:</span></td>
+                                <td class="product-name" data-title="Diện tích:"> <span>350.000 km2</span></td>
+                            </tr>
+                            <tr>
+                                <td class="product-name"> <span>Khí hậu:</span></td>
+                                <td class="product-name" data-title="Khí hậu:"> <span>Nhiệt đới ẩm</span></td>
+                            </tr>
+                            <tr>
+                                <td class="product-name"> <span>Dân số:</span></td>
+                                <td class="product-name" data-title="Dân số:"> <span>12 800.000 người</span></td>
+                            </tr>
+                            <tr>
+                                <td class="product-name"> <span>Thổ nhưỡng:</span></td>
+                                <td class="product-name" data-title="Thổ nhưỡng"> <span>Đất đỏ</span></td>
+                            </tr>
+                            <tr>
+                                <td class="product-name"> <span>Số lượng trái cây:</span></td>
+                                <td class="product-name" data-title="Số lượng trái cây:"> <span>15 loại</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </mat-tab>
         <mat-tab label="Quận/Huyện">
         </mat-tab>

@@ -177,3 +177,80 @@
         }
     }
 }
+
+// Tổng Quan
+$colortext: #05342D;
+.region_overview {
+    padding-left: 30px;
+    padding-right: 50px;
+    .region_overview_head {
+        margin-bottom: 80px;
+        .region_overview_title {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 45px;
+            line-height: normal;
+            font-weight: 500;
+            color: $colortext;
+            text-transform: capitalize;
+        }
+        .region_overview_description {
+            font-size: 16px;
+            line-height: 30px;
+            color: $colortext;
+            font-weight: 400;
+        }
+    }
+    .region_overview_carousel {
+        h4 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: $colortext;
+        }
+        img {
+            border-radius: 10px;
+            display: block;
+        }
+    }
+    .region_overview_statistic {
+        margin-top: 50px;
+        .statistics_heading {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 40px;
+            background-color: $colortext;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+        .table_statistic {
+            width: 100%;
+            margin-left: 40px;
+            margin-top: 40px;
+            tr {
+                td {
+                    &::before {
+                        content: attr(data-title) " ";
+                        float: left;
+                        text-transform: capitalize;
+                        margin-right: 15px;
+                        font-weight: bold;
+                        display: none;
+                    }
+                    span {
+                        font-size: 18px;
+                        color: $colortext;
+                    }
+                    &[data-title] {
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

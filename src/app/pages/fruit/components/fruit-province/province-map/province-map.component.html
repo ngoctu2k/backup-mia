@@ -6,7 +6,55 @@
     <svg viewBox="0 0 631 728" preserveAspectRatio="xMidYMid meet" class="svg_image"></svg>
   </div>
 </div> -->
-<div class="province__map" *ngIf="isShow">
+
+<div class="map_region" *ngIf="isShow">
+    <div class="map_region_title">
+        <h2>Hà Giang</h2>
+        <div class="">
+            <a href=""><img src="assets/images/food-and-restaurant.png" alt=""> Trái cây ở Hà giang
+                <mat-icon class="icon_chevron_right">chevron_right</mat-icon>
+            </a>
+
+        </div>
+    </div>
+    <div class="map_region_statistics">
+        <table id="" class="table_statistic">
+            <tbody>
+                <tr>
+                    <td class="product-name"> <span>Số lượng tỉnh/thành phố:</span></td>
+                    <td class="product-name" data-title="Số lượng tỉnh/thành phố:"> <span>11 tỉnh/thành phố</span></td>
+                </tr>
+                <tr>
+                    <td class="product-name"> <span>Diện tích:</span></td>
+                    <td class="product-name" data-title="Diện tích:"> <span>350.000 km2</span></td>
+                </tr>
+                <tr>
+                    <td class="product-name"> <span>Khí hậu:</span></td>
+                    <td class="product-name" data-title="Khí hậu:"> <span>Nhiệt đới ẩm</span></td>
+                </tr>
+
+
+            </tbody>
+        </table>
+        <table id="" class="table_statistic">
+            <tbody>
+
+                <tr>
+                    <td class="product-name"> <span>Dân số:</span></td>
+                    <td class="product-name" data-title="Dân số:"> <span>12 800.000 người</span></td>
+                </tr>
+                <tr>
+                    <td class="product-name"> <span>Thổ nhưỡng:</span></td>
+                    <td class="product-name" data-title="Thổ nhưỡng"> <span>Đất đỏ</span></td>
+                </tr>
+                <tr>
+                    <td class="product-name"> <span>Số lượng trái cây:</span></td>
+                    <td class="product-name" data-title="Số lượng trái cây:"> <span>15 loại</span></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
 </div>
 <div class="detail__province" *ngIf="!isShow">
     <div class="detail__close" (click)="hide()">
