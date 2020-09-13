@@ -11,22 +11,11 @@
                 </div>
                 <div class="region_overview_carousel pl-40">
                     <h4>Trái cây đặc trưng</h4>
-                    <carousel [margin]="12" [height]="130">
-                        <div class="carousel-cell">
-                            <img src="assets/images/slider1.png">
+                    <carousel [height]="130">
+                        <div class="carousel-cell" *ngFor="let img of arrImages">
+                            <img [src]="img">
                         </div>
-                        <div class="carousel-cell">
-                            <img src="assets/images/slider1.png">
-                        </div>
-                        <div class="carousel-cell">
-                            <img src="assets/images/slider1.png">
-                        </div>
-                        <div class="carousel-cell">
-                            <img src="assets/images/slider1.png">
-                        </div>
-                        <div class="carousel-cell">
-                            <img src="assets/images/slider1.png">
-                        </div>
+
                     </carousel>
                 </div>
                 <div class="region_overview_statistic">

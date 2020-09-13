@@ -33,7 +33,13 @@ export class RegionOverviewComponent implements OnInit {
   // numberArr = [
   //   1, 2, 3, 4, 5, 6,
   // ];
+arrImages=[
+  "assets/images/slider1.png",
+  "assets/images/slider1.png",
+  "assets/images/slider1.png",
+  "assets/images/slider1.png",
 
+]
   constructor(private provinceService :ProvinceService) { }
   ngOnInit(): void {
     this.provinceService.getProvince().subscribe(
