@@ -44,7 +44,7 @@
         <mat-tab label="Vùng/Miền">
             <h1 class="mat-region-text">Viet Nam</h1>
             <div class="search_all">
-                <div class="search_result_item " *ngFor="let item of list_region" (click)=getId(item.GeographicregionGeographicinfoId)>
+                <div class="search_result_item " *ngFor="let item of list_region">
                     <h1>{{item.Name}}</h1>
                     <div class="statistic_right">
 
@@ -64,7 +64,7 @@
                         </table>
                         <div class="regions_fruit_icon d-flex">
                             <img src="../../../../../../assets/images/food-and-restaurant.png" alt="">
-                            <a>Trái cây ở {{item.Name}}</a>
+                            <a (click)=getId(item.GeographicregionGeographicinfoId)>Trái cây ở {{item.Name}}</a>
                             <mat-icon>chevron_right</mat-icon>
                         </div>
                     </div>
