@@ -50,6 +50,45 @@
         transform: translateX(-50%);
         left: 50% !important;
     }
+    .mat-tab-group {
+        height: 100%;
+        .mat-tab-body-wrapper {
+            height: 100%;
+        }
+    }
+}
+
+// scroll bar
+
+/* Let's get this party started */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background: #05342D;
+    height: 10px !important;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #05342D;
+    height: 10px !important;
 }
 
 * {
@@ -141,6 +180,9 @@ $colortext: #05342D;
 // Vùng miền
 .region_matregions {
     padding: 0 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     .region_matregions_carousel {
          ::ng-deep {
             .carousel-arrow {
@@ -177,12 +219,15 @@ $colortext: #05342D;
         }
     }
     .matregions_list {
+        flex: 1;
         background-color: #fff;
         padding-top: 20px;
         padding-right: 20px;
         border-radius: 10px;
+        margin-bottom: 30px;
+        overflow-y: auto;
+        overflow-x: hidden;
         ul {
-            max-height: 60vh;
             overflow-y: auto;
             overflow-x: hidden;
             padding-right: 20px;
