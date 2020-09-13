@@ -4,6 +4,7 @@ import { DrawMapService } from 'src/app/shared/services/draw-map.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { SharedDataService } from 'src/app/shared/services/shared-data.service';
 
+
 @Component({
   selector: 'app-region-map',
   templateUrl: './region-map.component.html',
@@ -17,7 +18,9 @@ export class RegionMapComponent implements OnInit, OnDestroy {
     private drawMap: DrawMapService,
     private sharedData: SharedDataService,
     private router: Router,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    
+    ) {
 
   }
 
@@ -68,4 +71,5 @@ export class RegionMapComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     select('svg').remove();
   }
+  
 }
