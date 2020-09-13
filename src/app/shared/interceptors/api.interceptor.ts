@@ -32,7 +32,7 @@ export class APIInterceptor implements HttpInterceptor {
     const token = localStorage.getItem('access_token');
     const request = req.clone({
       // url: `http://192.168.1.33/spacrm/${req.url}`,
-      url: `http://civieserver-env.h7rxnvnypm.ap-southeast-1.elasticbeanstalk.com/spacrm/${req.url}`,
+      url: `http://192.168.1.33/exchangeserver/${req.url}`,
       setHeaders: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json'

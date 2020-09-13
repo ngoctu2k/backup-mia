@@ -1,5 +1,5 @@
 ::ng-deep .nation_detail {
-  background-color: #faf9f7;
+  background-color: #EFF5EE;
   border-radius: 10px;
   height: 87vh;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
@@ -25,6 +25,7 @@
 }
 ::ng-deep .nation_detail .mat-tab-body-content {
   overflow: hidden;
+  padding: 0 35px;
 }
 ::ng-deep .nation_detail .mat-tab-label-container {
   padding: 10px 10px 0 10px;
@@ -91,7 +92,7 @@
 }
 
 * {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI";
 }
 
 .nation_detail_overview {
@@ -133,10 +134,11 @@
     height: 350px;
   }
 }
-@media (min-height: 900px) {
-  .nation_overview_video iframe {
-    height: 250px;
-  }
+.nation_overview_video iframe .mat-tab-list {
+  height: 44px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 50px;
 }
 @media screen and (max-width: 959px) {
   .nation_overview_video iframe {
@@ -266,156 +268,66 @@
   }
 }
 
-.regions_statistic {
-  background-color: #faf9f7;
-  padding-left: 20px;
-  padding-right: 30px;
+.mat-region-text {
+  font-size: 45px;
+  color: #05342D;
+  padding: 60px;
+  text-align: center;
 }
-.regions_statistic .regions_statistic_list {
-  width: 100%;
+
+.search_all::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
 }
-.regions_statistic .regions_statistic_list .statistic_detail {
-  margin-bottom: 18px;
-  background: #ffffff;
+
+.search_all {
+  background-color: #ffffff;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
-  padding: 10px;
-  position: relative;
+  height: 57vh;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
 }
-@media screen and (max-width: 599px) {
-  .regions_statistic .regions_statistic_list .statistic_detail {
-    position: relative;
-    width: 100%;
-    display: flex;
-    height: 225px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.search_all .search_result_item {
+  padding: 15px 25px 0;
 }
-@media screen and (min-width: 960px) and (max-width: 1279px) {
-  .regions_statistic .regions_statistic_list .statistic_detail {
-    position: relative;
-    width: 100%;
-    display: flex;
-    height: 225px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.search_all .search_result_item h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #063022;
 }
-.regions_statistic .regions_statistic_list .statistic_detail .statistic_right {
+.search_all .search_result_item .statistic_right {
   position: relative;
   flex: 1;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   display: flex;
+  border-bottom: 2px solid #05342D;
+  padding-bottom: 15px;
+}
+.search_all .search_result_item .statistic_right .table_lable {
+  font-size: 16px;
+  color: #063022;
+  font-weight: 600;
+  padding-right: 100px;
+}
+.search_all .search_result_item .statistic_right .table_detail {
+  font-size: 16px;
+  color: #063022;
 }
 @media (max-width: 430px) {
-  .regions_statistic .regions_statistic_list .statistic_detail .statistic_right {
+  .search_all .search_result_item .statistic_right {
     flex-direction: column;
     justify-content: space-around;
   }
 }
-.regions_statistic .regions_statistic_list .statistic_detail .region_name {
-  position: relative;
-  display: inline-block;
-  padding: 33px;
-  background-color: #c2a874;
-  border-radius: 10px;
+.search_all .search_result_item .statistic_right .regions_fruit_icon {
+  margin-top: 35px;
 }
-@media screen and (max-width: 599px) {
-  .regions_statistic .regions_statistic_list .statistic_detail .region_name {
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-  }
-}
-@media screen and (min-width: 960px) and (max-width: 1279px) {
-  .regions_statistic .regions_statistic_list .statistic_detail .region_name {
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-  }
-}
-@media (max-width: 380px) {
-  .regions_statistic .regions_statistic_list .statistic_detail .region_name {
-    padding: 20px 0 10px 0;
-  }
-}
-.regions_statistic .regions_statistic_list .statistic_detail .region_name h3 {
-  display: inline;
-  color: #ffffff;
-}
-@media screen and (max-width: 599px) {
-  .regions_statistic .regions_statistic_list .statistic_detail .region_name h3 {
-    font-size: 18px;
-  }
-}
-.regions_statistic .regions_statistic_list .statistic_detail .region_name span {
-  position: absolute;
-  z-index: 3;
-  width: 90px;
-  border-bottom-left-radius: 5px;
-  height: 30px;
-  border-bottom-right-radius: 5px;
-  background-color: #ccc;
-  line-height: 30px;
-  text-align: center;
-  font-size: 18px;
-  top: -10px;
-  left: 50%;
-  font-weight: 600;
-  transform: translateX(-50%);
-}
-@media screen and (max-width: 599px) {
-  .regions_statistic .regions_statistic_list .statistic_detail .region_name span {
-    height: 28px;
-  }
-}
-.regions_statistic .regions_statistic_list .statistic_detail .regions_table {
-  margin-left: 40px;
-}
-@media screen and (max-width: 599px) {
-  .regions_statistic .regions_statistic_list .statistic_detail .regions_table {
-    margin-left: 20px;
-    bottom: 30px;
-  }
-}
-@media (max-width: 430px) {
-  .regions_statistic .regions_statistic_list .statistic_detail .regions_table {
-    width: 100%;
-  }
-}
-@media (min-width: 1280px) and (max-width: 1440px) {
-  .regions_statistic .regions_statistic_list .statistic_detail .regions_table {
-    margin-left: 15px;
-  }
-}
-.regions_statistic .regions_statistic_list .statistic_detail .regions_table tr {
-  line-height: 32px;
-}
-.regions_statistic .regions_statistic_list .statistic_detail .regions_table td {
-  font-size: 16px;
-}
-.regions_statistic .regions_statistic_list .statistic_detail .regions_table .table_lable {
-  display: block;
-  margin-right: 35px;
-  font-weight: 600;
-}
-@media (max-width: 430px) {
-  .regions_statistic .regions_statistic_list .statistic_detail .regions_table .table_lable {
-    margin-right: 0;
-  }
-}
-@media (min-width: 1280px) and (max-width: 1440px) {
-  .regions_statistic .regions_statistic_list .statistic_detail .regions_table .table_lable {
-    margin-right: 10px;
-  }
-}
-.regions_statistic .regions_statistic_list .statistic_detail .regions_table .table_detail {
-  font-weight: 400;
+
+::ng-deep.regions_fruit_icon .mat-icon {
+  font-family: "Material Icons" !important;
 }
 
 .fruit_pagination {
@@ -468,22 +380,6 @@
   background-color: #4f6a5d;
   color: white;
   border-radius: 10px;
-}
-
-.fruit_total {
-  display: block;
-  padding: 15px 25px 15px 0;
-  text-align: right;
-  margin-bottom: 0;
-  font-size: 18px;
-}
-@media screen and (max-width: 599px) {
-  .fruit_total {
-    font-size: 16px;
-  }
-}
-.fruit_total span {
-  font-weight: 600;
 }
 
 .fruit {

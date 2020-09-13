@@ -1,0 +1,113 @@
+.search_region {
+  margin-top: 20px;
+  width: 80%;
+}
+@media screen and (max-width: 959px) {
+  .search_region .fruit_text {
+    padding-left: 0;
+  }
+}
+.search_region .fruit_text span {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #808080;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+@media screen and (max-width: 959px) {
+  .search_region .fruit_text span {
+    margin-left: 0;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .search_region .fruit_text span {
+    font-size: 10px;
+  }
+}
+
+.search_list {
+  width: 78vw;
+  border: none;
+  position: relative;
+  margin-right: 15px;
+  padding: 8px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.search_result {
+  padding-left: 100px;
+}
+@media screen and (max-width: 599px) {
+  .search_result {
+    padding-left: 0px;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+  .search_result {
+    padding-left: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .search_result {
+    padding-left: 0px;
+  }
+}
+.search_result .search_result_item {
+  border: 1px solid #202F2C;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 10px;
+}
+.search_result .search_result_item h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #063022;
+}
+@media screen and (max-width: 599px) {
+  .search_result .search_result_item h1 {
+    margin-left: 15px;
+  }
+}
+.search_result .search_result_item .statistic_right {
+  position: relative;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+}
+.search_result .search_result_item .statistic_right .table_lable {
+  font-size: 16px;
+  color: #063022;
+  font-weight: 600;
+  padding-right: 100px;
+}
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+  .search_result .search_result_item .statistic_right .table_lable {
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .search_result .search_result_item .statistic_right .table_lable {
+    padding-right: 0px;
+  }
+}
+.search_result .search_result_item .statistic_right .table_detail {
+  font-size: 16px;
+  color: #063022;
+}
+@media (max-width: 430px) {
+  .search_result .search_result_item .statistic_right {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+.search_result .search_result_item .statistic_right .regions_fruit_icon {
+  margin-top: 35px;
+}

@@ -1,233 +1,82 @@
 @import "../../../shared/scss/_responsive.scss";
 
-.fruit-text {
-  margin-bottom: 67px;
-  margin-left: 130px;
+.search_region {
+  // padding-left: 105px;
+  margin-top: 20px;
 
-  @media #{$lt_lg} {
-    margin: 0 0 0 0;
-  }
+  width: 80%;
 
-  span {
-    margin-left: 5px;
-    color: #808080;
-  }
-}
+  .fruit_text {
 
-.fruit_list {
-  .fruit_type {
-    z-index: 3;
-    position: absolute;
-    top: 0;
-    width: 90px;
-    margin-left: 24px;
-    border-bottom-left-radius: 5px;
-    height: 25px;
-    border-bottom-right-radius: 5px;
-    background-color: #ccc;
-    line-height: 30px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-
-    @media #{$lt_sm} {
-      height: 30px;
-      line-height: 30px;
-      text-align: center;
-      font-size: 18px;
-      top: -10px;
-      margin-left: 0;
-      left: 50%;
-      font-weight: 600;
-      transform: translateX(-50%);
-
-      @media #{$lt_sm} {
-        height: 28px;
-      }
-    }
-  }
-
-  .fruit_item {
-    z-index: 2;
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
-    height: 112px;
-    background-color: #f2f0e6;
-    border: 6px solid white;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
-    margin-left: 70px;
-    width: 90%;
-    height: 105px;
-
-    @media #{$sm} {
-      margin-left: 35px;
-    }
-
-    @media #{$lt_sm} {
-      height: 100%;
-      margin-left: 0px;
-      width: 100%;
-    }
-
-    @media (max-width: 550px) {
-      flex-direction: column;
-      height: auto;
-    }
-
-    .fruit_item_img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      img {
-        height: 94px;
-      }
-    }
-
-    .fruit_item_text {
-      margin-left: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      margin-bottom: 10px;
-
-      @media #{$lt_sm} {
-        order: 2;
-        margin-left: 0;
-        align-items: center;
-      }
-
-      p {
-        margin-bottom: 0;
-      }
-
-      h4 {
-        font-size: 18px;
-        color: #000000;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        margin-top: 30px !important;
-        margin-bottom: 5px !important;
-        font-weight: 600 !important;
-
-        @media #{$lt_sm} {
-          font-size: 16px;
-          text-align: center;
-          margin-top: 15px !important;
-          margin-bottom: 0 !important;
-        }
-      }
-
-      .fruit_code {
-        margin-bottom: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-      }
-
-      .fruit_ratings_css {
-        display: flex;
-
-        @media #{$lt_sm} {
-          justify-content: center;
-          margin-left: 25px;
-        }
-
-        p {
-          margin-right: 5px;
-          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-          font-size: 16px;
-          font-weight: 400;
-          margin-bottom: 0;
-          width: 100%;
-
-          @media #{$lt_xs} {
-            font-size: 14px;
-          }
-        }
-
-        .fruit_ratings_css_top {
-          font-size: 18px;
-          margin-right: 10px;
-
-          @media #{$lt_xs} {
-            font-size: 14px;
-          }
-
-          span {
-            background: linear-gradient(to top, #daa461 100%, #daa461 0%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16);
-          }
-        }
-      }
-    }
-  }
-}
-
-.regions-text {
-  margin-bottom: 72px;
-
-  @media #{$lt_lg} {
-    margin: 20px 0 0 0;
-  }
-
-  span {
-    color: #808080;
-    margin-left: 5px;
-  }
-}
-
-.regions_statistic {
-  padding: 0;
-
-  @media #{$lt_sm} {
-    padding: 20px !important;
-  }
-
-  .regions_statistic_list {
-    width: 100%;
-  }
-
-  .statistic_detail {
-    margin-bottom: 18px;
-    background: #ffffff;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
-    height: 105px;
-    padding: 6px;
-    position: relative;
-    width: 95%;
-    margin-left: 15px;
-
-    @media #{$sm} {
-      margin-left: 35px !important;
-      padding: 20px;
-    }
-
-    @media #{$lt_lg} {
-      margin-left: 90px;
-      width: 86%;
-    }
 
     @media #{$lt_md} {
-      width: 88%;
+      padding-left: 0;
     }
 
-    @media #{$lt_sm} {
-      position: relative;
-      width: 100%;
-      display: flex;
-      height: 225px;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-left: 0;
+    span {
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: 300;
+      color: #808080;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+      @media #{$lt_md} {
+        margin-left: 0;
+        font-size: 12px;
+      }
+
+      @media #{$lt_sm} {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.search_list {
+  width: 78vw;
+  border: none;
+  position: relative;
+  margin-right: 15px;
+  padding: 8px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.search_result {
+  padding-left: 100px;
+
+  @media #{$xs} {
+    padding-left: 0px;
+  }
+
+  @media screen and (min-width: 1280px) and (max-width: 1440px) {
+    padding-left: 60px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    padding-left: 0px;
+  }
+
+
+
+  .search_result_item {
+    border: 1px solid #202F2C;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 10px;
+
+    & h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #063022;
+
+      @media #{$xs} {
+        margin-left: 15px;
+      }
     }
 
     .statistic_right {
@@ -238,101 +87,37 @@
       width: 100%;
       display: flex;
 
-      @media (max-width: 430px) {
-        flex-direction: column;
-        justify-content: space-around;
-      }
-    }
-
-    .region_name {
-      position: relative;
-      display: inline-block;
-      padding: 33px;
-      background-color: #c2a874;
-      border-radius: 10px;
-
-      @media #{$lt_sm} {
-        padding: 20px;
-        text-align: center;
-        width: 100%;
-      }
-
-      @media (max-width: 380px) {
-        padding: 20px 0 10px 0;
-      }
-
-      h3 {
-        display: inline;
-        color: #ffffff;
-
-        @media #{$lt_sm} {
-          font-size: 18px;
-        }
-      }
-
-      span {
-        position: absolute;
-        z-index: 3;
-        width: 90px;
-        border-bottom-left-radius: 5px;
-        height: 30px;
-        border-bottom-right-radius: 5px;
-        background-color: #ccc;
-        line-height: 30px;
-        text-align: center;
-        font-size: 18px;
-        top: -10px;
-        left: 50%;
-        font-weight: 600;
-        transform: translateX(-50%);
-
-        @media #{$lt_sm} {
-          height: 28px;
-        }
-      }
-    }
-
-    .regions_table {
-      margin-left: 40px;
-
-      @media #{$lt_sm} {
-        margin-left: 20px;
-        bottom: 30px;
-      }
-
-      @media (max-width: 430px) {
-        width: 100%;
-      }
-
-      @media (min-width: 1280px) and (max-width: 1440px) {
-        margin-left: 15px;
-      }
-
-      tr {
-        line-height: 32px;
-      }
-
-      td {
-        font-size: 16px;
-      }
-
       .table_lable {
-        display: block;
-        margin-right: 35px;
+        font-size: 16px;
+        color: #063022;
         font-weight: 600;
+        padding-right: 100px;
 
-        @media (max-width: 430px) {
-          margin-right: 0;
+        @media screen and (min-width: 1280px) and (max-width: 1440px) {
+          padding-right: 50px;
         }
 
-        @media (min-width: 1280px) and (max-width: 1440px) {
-          margin-right: 10px;
+        @media #{$xs} {
+          padding-right: 0px;
         }
       }
 
       .table_detail {
-        font-weight: 400;
+        font-size: 16px;
+        color: #063022;
+      }
+
+      @media (max-width: 430px) {
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .regions_fruit_icon {
+        margin-top: 35px;
       }
     }
   }
+
+
+
 }
