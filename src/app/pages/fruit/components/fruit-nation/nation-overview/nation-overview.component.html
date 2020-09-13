@@ -44,32 +44,30 @@
         <mat-tab label="Vùng/Miền">
             <h1 class="mat-region-text">Viet Nam</h1>
             <div class="search_all">
-                <div class="search_result_item " *ngFor="let item of list_region">
-                    <a [routerLink]="route">
-                        <h1>{{item.Name}}</h1>
-                        <div class="statistic_right">
+                <div class="search_result_item " *ngFor="let item of list_region" (click)=getId(item.GeographicregionGeographicinfoId)>
+                    <h1>{{item.Name}}</h1>
+                    <div class="statistic_right">
 
-                            <table class="regions_table">
-                                <tr>
-                                    <td class="table_lable">Diện tích:</td>
-                                    <td class="table_detail">2500 km2</td>
-                                </tr>
-                                <tr>
-                                    <td class="table_lable">Khí hậu:</td>
-                                    <td class="table_detail">Nhiệt đới ẩm</td>
-                                </tr>
-                                <tr>
-                                    <td class="table_lable">Loại trái cây:</td>
-                                    <td class="table_detail">1 loại</td>
-                                </tr>
-                            </table>
-                            <div class="regions_fruit_icon d-flex">
-                                <img src="../../../../../../assets/images/food-and-restaurant.png" alt="">
-                                <a>Trái cây ở {{item.Name}}</a>
-                                <mat-icon>chevron_right</mat-icon>
-                            </div>
+                        <table class="regions_table">
+                            <tr>
+                                <td class="table_lable">Diện tích:</td>
+                                <td class="table_detail">2500 km2</td>
+                            </tr>
+                            <tr>
+                                <td class="table_lable">Khí hậu:</td>
+                                <td class="table_detail">Nhiệt đới ẩm</td>
+                            </tr>
+                            <tr>
+                                <td class="table_lable">Loại trái cây:</td>
+                                <td class="table_detail">1 loại</td>
+                            </tr>
+                        </table>
+                        <div class="regions_fruit_icon d-flex">
+                            <img src="../../../../../../assets/images/food-and-restaurant.png" alt="">
+                            <a>Trái cây ở {{item.Name}}</a>
+                            <mat-icon>chevron_right</mat-icon>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
 

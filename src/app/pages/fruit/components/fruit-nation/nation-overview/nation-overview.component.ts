@@ -1,7 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { _countGroupLabelsBeforeOption } from '@angular/material/core';
 import { PaginationInstance } from 'ngx-pagination';
+import { from } from 'rxjs';
 import { RegionService } from '../../../services/region.service';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-nation-overview',
@@ -47,15 +50,19 @@ export class NationOverviewComponent implements OnInit {
     1, 2, 3, 4, 5, 6,
   ];
   list_region;
-  route;
 
-  constructor(private regionService: RegionService) { }
+  constructor(private regionService: RegionService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.regionService.list().subscribe(res => {
       this.list_region = res;
       console.log(res);
     })
+  }
+  getId(val){
+    let region = this.Region.find(a => a.id === val);
+    this.router.navigate(['pages/fruit', region.slug])
   }
   handleDetailFruit() {
     this.isDetail = true;
