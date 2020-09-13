@@ -46,7 +46,11 @@
     height: 44px;
     width: 100%;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
   }
 
   .mat-ink-bar {
@@ -104,7 +108,7 @@
 }
 
 .nation_detail_overview {
-  padding: 0 30px;
+
 
   @media #{$lt_lg} {
     padding: 0 30px 60px 30px;
@@ -116,6 +120,82 @@
 
   @media #{$md} {
     padding: 0 15px 30px 15px;
+  }
+}
+
+.search_common {
+
+
+  @media #{$xs} {
+    border-right: none;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    border-right: none;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1280px) and (max-width: 1440px) {
+    border-right: none;
+    margin-bottom: 20px;
+    min-width: 30% !important;
+  }
+
+
+  .search_common_list {
+    margin-top: 15px;
+
+    & img {
+      width: 115px;
+      height: 115px;
+    }
+
+    .common_item {
+      margin-left: 20px;
+
+      .item_text {
+        margin-bottom: 11px;
+
+        & ul {
+          & li {
+            color: #202F2C;
+            font-size: 13px;
+
+            & a {
+              font-size: 16px;
+              color: #202F2C;
+              font-weight: 500;
+
+            }
+          }
+        }
+      }
+
+      .fruit_ratings_css_top {
+        display: flex;
+
+        @media #{$lt_xs} {
+          font-size: 14px;
+        }
+
+        span {
+          & img {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+          }
+
+
+        }
+
+        .gap {
+          & img {
+            width: 25px !important;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -160,9 +240,9 @@
 
 .nation_overview_statistic {
   margin-top: 25px;
-  background: #f2f0e6;
+  background: #EFF5EE;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+
   position: relative;
   padding-bottom: 100px;
 
@@ -190,9 +270,9 @@
   .overview_title {
     max-height: 46px;
     margin: 10px 10px 25px 10px;
-    padding-left: 25px;
-    background-color: #e6e4da;
-    border-radius: 10px;
+    display: flex;
+
+    border-bottom: 1px solid #05342D;
 
     @media (max-width: 500px) {
       text-align: center;
@@ -209,9 +289,10 @@
     }
 
     h4 {
-      font-weight: 600;
+      font-weight: 400;
       margin-bottom: 0;
-      font-size: 21px;
+      font-size: 20px;
+      color: #05342D;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       padding: 10px 0;
 
@@ -226,7 +307,7 @@
   }
 
   .overview_detail {
-    padding: 0 30px;
+    padding: 0 10px;
 
     @media #{$lt_sm} {
       padding: 0 15px;

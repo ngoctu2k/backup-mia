@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../shared/shared.module';
 import { StandardRoutingModule } from './standard-routing.module';
 import { StandardComponent } from './standard.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { StandardComponent } from './standard.component';
   imports: [
     CommonModule,
     StandardRoutingModule,
-    SharedModule
+    SharedModule,
+    FlexLayoutModule,
   ]
 })
 export class StandardModule { }
