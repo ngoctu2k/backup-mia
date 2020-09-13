@@ -45,6 +45,20 @@ var UserComponent = /** @class */ (function () {
                 image: "assets/images/slider1.png"
             },
         ];
+        this.region = [
+            {
+                name: "Hà Giang"
+            },
+            {
+                name: "Bắc Giang"
+            },
+            {
+                name: "Hà Nội"
+            },
+            {
+                name: "Lào Cai"
+            },
+        ];
         this.clickedSearch = new core_2.EventEmitter();
         this.user = {};
     }

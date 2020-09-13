@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { _countGroupLabelsBeforeOption } from '@angular/material/core';
 import { PaginationInstance } from 'ngx-pagination';
+import { RegionService } from '../../../services/region.service';
 
 @Component({
   selector: 'app-nation-overview',
@@ -33,10 +35,17 @@ export class NationOverviewComponent implements OnInit {
   numberArr = [
     1, 2, 3, 4, 5, 6,
   ];
-  constructor() { }
+  list_region;
+
+
+  constructor(private regionService: RegionService) { }
 
   ngOnInit(): void {
+    this.regionService.list().subscribe(res => {
+      this.list_region = res;
+      console.log(res);
 
+    })
 
   }
   handleDetailFruit() {

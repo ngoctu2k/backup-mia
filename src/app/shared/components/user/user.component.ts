@@ -50,6 +50,25 @@ export class UserComponent implements OnInit {
     },
 
   ]
+  region = [
+    {
+      name: "Hà Giang"
+    },
+    {
+      name: "Bắc Giang"
+
+    },
+    {
+      name: "Hà Nội"
+
+    },
+    {
+      name: "Lào Cai"
+
+    },
+
+
+  ]
   @Output() clickedSearch = new EventEmitter();
   constructor(
     private router: Router

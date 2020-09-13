@@ -7,6 +7,19 @@
 
 .search_common {
     border-right: 2px solid #ccc;
+    @media #{$xs} {
+        border-right: none;
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        border-right: none;
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1280px) and (max-width: 1440px) {
+        border-right: none;
+        margin-bottom: 20px;
+        min-width: 30% !important;
+    }
     .search_common_list {
         margin-top: 15px;
         & img {
@@ -37,7 +50,7 @@
                 }
                 span {
                     font-size: 25px;
-                    background: linear-gradient(to top, #daa461 100%, #daa461 0%);
+                    background: linear-gradient(to top, #DAA461 100%, #DAA461 0%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16);
@@ -49,14 +62,27 @@
 
 .search_result {
     padding-left: 100px;
+    @media #{$xs} {
+        padding-left: 0px;
+    }
+    @media screen and (min-width: 1280px) and (max-width: 1440px) {
+        padding-left: 60px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        padding-left: 0px;
+    }
     .search_result_item {
-        border: 2px solid #202F2C;
-        border-radius: 10px;
+        border: 1px solid #202F2C;
+        border-radius: 5px;
         padding: 20px;
+        margin-top: 10px;
         & h1 {
             font-size: 24px;
             font-weight: 600;
             color: #063022;
+            @media #{$xs} {
+                margin-left: 15px;
+            }
         }
         .statistic_right {
             position: relative;
@@ -70,6 +96,12 @@
                 color: #063022;
                 font-weight: 600;
                 padding-right: 100px;
+                @media screen and (min-width: 1280px) and (max-width: 1440px) {
+                    padding-right: 50px;
+                }
+                @media #{$xs} {
+                    padding-right: 0px;
+                }
             }
             .table_detail {
                 font-size: 16px;
@@ -192,7 +224,7 @@
         position: relative;
         border: none;
         // padding: 10px;
-        background-color: #ffffff;
+        background-color: #FFFFFF;
         border: #707070;
         box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.16);
     }
@@ -257,7 +289,7 @@
         font-size: 10px;
     }
     &:hover {
-        background-color: #e6e4da;
+        background-color: #E6E4DA;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -332,7 +364,7 @@
     position: relative;
     border: none;
     padding: 10px;
-    background-color: #f2f1ed;
+    background-color: #F2F1ED;
     border: #707070;
     box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.16);
 }
