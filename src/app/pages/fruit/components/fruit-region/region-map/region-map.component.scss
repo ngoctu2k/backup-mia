@@ -55,6 +55,7 @@
 //
 .map_region {
     height: 87vh;
+    position: relative;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -69,11 +70,23 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: 70%;
+        bottom: 0;
+        z-index: 1;
+        background-image: linear-gradient(to top, rgba(5, 52, 45, 1), rgba(5, 52, 45, .91), rgb(5, 52, 45, .51), rgba(255, 255, 255, .0));
+    }
     .map_region_title {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 45px;
+        z-index: 10;
         h2 {
             color: #FFFFFF;
             font-size: 90px;
@@ -109,6 +122,7 @@
     .map_region_statistics {
         display: flex;
         color: #fff;
+        z-index: 10;
         .table_statistic {
             width: 50%;
             tr {
