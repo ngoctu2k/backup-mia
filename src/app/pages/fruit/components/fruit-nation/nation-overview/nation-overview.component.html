@@ -75,56 +75,32 @@
 
         </mat-tab>
         <mat-tab label="Trái cây">
-            <p class="fruit_total">Tổng: <span>15 loại trái cây</span> </p>
-            <div class="fruit">
-                <div class="fruit_list">
-                    <div class="list_item" style="position: relative; margin-bottom: 20px;" *ngFor="let item of list| paginate
-                    : fruitConf ; let i = index ">
-                        <div class="fruit_type">{{i + 1}}</div>
-                        <div class="fruit_item" (click)="handleDetailFruit()" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="center">
-                            <div class="fruit_item_text" fxFlexAlign.lt-sm="center">
-                                <h4>Chuối Laba Đà Lạt</h4>
-                                <div class="fruit_ratings_css">
-                                    <p>Đánh giá :</p>
-                                    <div class="fruit_ratings_css_top">
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
-                                        <span>★</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="fruit_item_img">
-                                <img src="assets/images/engin-akyurt-4yTKah43Y2o-unsplash.png" alt="">
-                            </div>
+
+
+            <div class="search_common" fxFlex="35" fxLayoutGap="30px" fxLayout.lt-md="column">
+
+                <div class="search_common_list d-flex" *ngFor="let item of list">
+                    <img [src]=item.image alt="">
+                    <div class="common_item">
+                        <div class="item_text">
+                            <ul>
+                                <li><a href="">{{item.name}}</a></li>
+                                <li>Khu vực : </li>
+                                <li>Thời gian mùa vụ :</li>
+                                <li>Số lượng :</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="fruit_ratings_css_top">
+                            <span><img src="../../../../../../assets/images/Group 4838.png" alt=""></span>
+                            <span><img src="../../../../../../assets/images/Group 4837.png" alt=""></span>
+                            <span><img src="../../../../../../assets/images/Group 4839.png" alt=""></span>
+                            <span class="gap"><img src="../../../../../../assets/images/Image_19-removebg-preview.png" alt=""></span>
+                            <span class="gap"><img src="../../../../../../assets/images/Image_20-removebg-preview.png" alt=""></span>
                         </div>
                     </div>
                 </div>
-                <pagination-template class="fruit_pagination" #pg="paginationApi" (pageChange)="fruitConf.currentPage = $event" [id]="fruitConf.id">
-                    <ul class="pagination_list" fxLayout="row" fxLayoutAlign="center center">
-                        <div>
-                            <li class="page_item page_item_previous">
-                                <a class="page_link" aria-label="Previous" (click)="pg.previous()">
-                  Trước
-                </a>
-                            </li>
-                        </div>
-                        <div *ngFor="let page of pg.pages" [class.active]="pg.getCurrent() === page.value">
-                            <li class="page_item">
-                                <a class="page_link" (click)="pg.setCurrent(page.value)" [class.disabled]="pg.getCurrent() === page.value" *ngIf="pg.getCurrent() !== page.value">{{ page.label }}</a>
-                                <a class="page_link" *ngIf="pg.getCurrent() === page.value">{{ page.label }}</a>
-                            </li>
-                        </div>
-                        <div>
-                            <li class="page_item page_item_next">
-                                <a class="page_link" aria-label="Next" (click)="pg.next()">
-                  Sau
-                </a>
-                            </li>
-                        </div>
-                    </ul>
-                </pagination-template>
             </div>
         </mat-tab>
     </mat-tab-group>

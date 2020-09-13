@@ -17,4 +17,7 @@ export class ProvinceService extends BaseApiService<Province>{
   getProvince(id){
     return this.http.get(`api/province/Geographicregion/${id}`).pipe(map((data:any) => data.Payload));
   }
+  getFruitProvince(id){
+    // return this.http.get(`api/province/Geographicregion/${id}`).pipe(map((data:any) => data.Payload));
+  }
 }

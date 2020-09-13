@@ -472,7 +472,7 @@
                 li {
                     color: #192e29;
                     font-size: 16px;
-                    a {
+                    &:nth-child(1) {
                         font-size: 18px;
                         color: #051c16;
                         font-weight: 500;

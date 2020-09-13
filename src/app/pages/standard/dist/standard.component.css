@@ -1,0 +1,35 @@
+.standard {
+  height: 87vh;
+  background-color: #EFF5EE;
+  margin: 0px 40px;
+  border-radius: 15px;
+}
+.standard .standard_item1 {
+  padding: 60px 130px 0px 0px;
+}
+.standard .standard_item1 img {
+  height: 101px;
+  margin-right: 30px;
+}
+.standard .standard_item {
+  padding: 60px 0px 0px 200px;
+}
+.standard .standard_item img {
+  width: 101px;
+  height: 101px;
+  margin-right: 30px;
+}
+.standard .standard_item_text {
+  width: 400px;
+  height: 174px;
+}
+.standard .standard_item_text h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+.standard .standard_item_text p {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  line-height: 26px;
+}

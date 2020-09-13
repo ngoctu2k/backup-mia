@@ -33,15 +33,16 @@ export class ProvinceOverviewComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.provinceServce.getProvince().subscribe(res=>{
-      this.listProvince = res;
-      console.log(this.listProvince);
-      console.log("listProvince");
-    })
+
     this.activeRoute.paramMap.subscribe((params) => {
       this.idProvince = params.get('province')
       console.log(this.idProvince);
     });
+    this.provinceServce.getProvince(this.idProvince).subscribe(res=>{
+      this.listProvince = res;
+      console.log(this.listProvince);
+      console.log("listProvince");
+    })
     this.fruitService.getDetailFruit(this.idProvince).subscribe(res =>{
       this.listFruit = res;
       console.log(this.listFruit);

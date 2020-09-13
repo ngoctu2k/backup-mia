@@ -28,10 +28,6 @@ export class ProvinceMapComponent implements OnInit, OnDestroy {
     this.route.paramMap.subscribe(paramMap => {
       this.provinceLink = paramMap.get('province');
     });
-    this.fruitService.list().subscribe(res=>{
-      this.fruitDetail = res;
-      console.log(this.fruitDetail);
-    })
     this.sharedData.shareFruitDetail.subscribe(val=>{
       this.fruitDetail = val;
       console.log(this.fruitDetail);

@@ -34,9 +34,30 @@ export class NationOverviewComponent implements OnInit {
     currentPage: 1
   };
 
+
   list = [
-    1, 2, 3, 4, 5, 6,
-  ];
+    {
+      name: "Xoài Tứ Qúy",
+      image: "assets/images/slider1.png"
+    },
+    {
+      name: "Đào Tiên Tửu",
+      image: "assets/images/slider2.png"
+    },
+    {
+      name: "Thanh Long",
+      image: "assets/images/slider3.png"
+    },
+    {
+      name: "Bưởi Phú Diễn",
+      image: "assets/images/slider4.png"
+    },
+    {
+      name: "Mít Mê Linh",
+      image: "assets/images/slider1.png"
+    },
+
+  ]
   numberArr = [
     1, 2, 3, 4, 5, 6,
   ];
@@ -63,4 +84,5 @@ export class NationOverviewComponent implements OnInit {
     this.selectedIndex = 2;
     this.showFruitDetail.emit(this.isDetail);
   }
+
 }
