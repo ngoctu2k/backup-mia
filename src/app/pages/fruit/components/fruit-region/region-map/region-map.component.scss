@@ -79,6 +79,8 @@
         height: 70%;
         bottom: 0;
         z-index: 1;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
         background-image: linear-gradient(to top, rgba(5, 52, 45, 1), rgba(5, 52, 45, .91), rgb(5, 52, 45, .51), rgba(255, 255, 255, .0));
     }
     .map_region_title {
